@@ -15,16 +15,16 @@ export default function Top() {
     </>
   );
 }
-import React, { PropsWithChildren } from "react";
-import Navbar from "../component/Navbar";
+// import React, { PropsWithChildren } from "react";
+// import Navbar from "../component/Navbar";
 
-const Layout = ({ children }: PropsWithChildren) => {
-  return (
-    <>
-      <Navbar />
-      <div className="container">{children}</div>
-    </>
-  );
-};
+// const Layout = ({ children }: PropsWithChildren) => {
+//   return (
+//     <>
+//       <Navbar />
+//       <div className="container">{children}</div>
+//     </>
+//   );
+// };
 
-// export default Layout;
+// // export default Layout;

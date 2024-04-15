@@ -36,6 +36,10 @@
     border: 1px solid  var(--background-dark);
     padding:7%;
     border-radius: 5%;
+    transition: ;
+}
+.block:hover {
+    background-color: var(--background-dark);
 }
 @media screen and (max-width: 800px){
 

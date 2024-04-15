@@ -198,3 +198,13 @@ nav{
 .warrapcontainer{
     margin-top: 5rem;
 }
+
+
+/* back to top css */
+
+.Totop {
+    color:var(--yellow-primar);
+    margin: "0 auto";
+    background:"#0A0A0A";
+    box-shadow:'none'
+}
