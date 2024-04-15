@@ -1,0 +1,26 @@
+
+/* .imageCorousel{
+    
+} */
+.imageCorousel {
+    animation: fadeIn 0.7s;
+    /* display: none;  */
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+.imagediv{
+    position: relative;
+    width:100%;
+    height:70vh;
+    /* max-width: 700px; */
+    aspect-ratio: 70/45;
+    /* margin: 2rem auto; */
+}
+
+@media screen and (max-width: 800px){
+    .imagediv {
+        height: 40vh;
+    }
+}

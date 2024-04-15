@@ -1,14 +1,17 @@
 *{
     margin: 0;
     padding: 0;
-}
-body{
-    overflow-x: hidden;
+    font-family: "Baskervville", serif;
 }
 :root{
     --backgroud-primary:#1A1A1A;
     --yellow-primar:#FFA400;
     --text-color:#E5E5E5;
+    --background-dark:#0A0A0A;
+}
+body{
+    overflow-x: hidden;
+    color:var(--text-color);
 }
 /* Navabar CSS */
 
@@ -22,7 +25,7 @@ nav{
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
     display: flex;
     position: fixed;
-    z-index: 10;
+    z-index: 20000;
     color: var(--text-color);
 }
 
@@ -35,7 +38,7 @@ nav{
     display: flex;
     align-items:center;
     justify-content: flex-start;
-    z-index: 10;
+    z-index: 20000;
 }
 
 
@@ -114,7 +117,7 @@ nav{
 @media screen and (max-width: 800px){
     nav{
         position: fixed;
-        z-index: 10;
+        z-index: 20000;
     }
     .hamburger{
         display:block;
@@ -123,7 +126,7 @@ nav{
         right: 5%;
         top: 50%;
         transform: translate(-5%, -50%);
-        z-index: 2;
+        z-index: 20000;
         transition: all 0.7s ease;
     }
 
