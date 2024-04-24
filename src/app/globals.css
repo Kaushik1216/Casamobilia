@@ -4,9 +4,11 @@
     font-family: "Baskervville", serif;
 }
 :root{
-    --backgroud-primary:#1A1A1A;
+    --backgroud-primary:#E9E7E4;
+    /* --backgroud-primary:#1A1A1A; */
     --yellow-primar:#FFA400;
-    --text-color:#E5E5E5;
+    --text-color:#4D4D4D;
+    /* --text-color:#E5E5E5; */
     --background-dark:#0A0A0A;
 }
 body{
@@ -21,13 +23,16 @@ nav{
     left: 0;  
     height: 5rem;
     width: 100vw;
-    background-color: var(--backgroud-primary);
-    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    /* background-color: var(--backgroud-primary); */
+    /* box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2); */
     display: flex;
     position: fixed;
     z-index: 20000;
     color: var(--text-color);
 }
+
+
+
 
 /*Styling logo*/
 .logo{
@@ -103,9 +108,9 @@ nav{
 .hamburger div{
     width: 30px;
     height:3px;
-    background: #f2f5f7;
+    background: var(--text-color);
     margin: 5px;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 .hamburger{
     display: none;
@@ -114,7 +119,7 @@ nav{
     display: none;
 }
 /*Stying for small screens*/
-@media screen and (max-width: 800px){
+/* @media screen and (max-width: 800px){ */
     nav{
         position: fixed;
         z-index: 20000;
@@ -144,44 +149,21 @@ nav{
         font-weight: 600;
     }
     .nav-links.open{
-        clip-path: circle(1000px at 90% -10%);
-        -webkit-clip-path: circle(1000px at 90% -10%);
+        clip-path: circle(2000px at 90% -10%);
+        -webkit-clip-path: circle(2000px at 90% -10%);
         pointer-events: all;
     }
     .nav-links li{
         opacity: 0;
     }
-    .nav-links li:nth-child(1){
-        transition: all 0.8s ease 0.2s;
-    }
-    .nav-links li:nth-child(2){
-        transition: all 0.9s ease 0.4s;
-    }
-    .nav-links li:nth-child(3){
-        transition: all 1s ease 0.6s;
-    }
-    .nav-links li:nth-child(4){
-        transition: all 1.2s ease 0.7s;
-    }
-    .nav-links li:nth-child(5){
-        transition: all 1.4s ease 0.8s;
-    }
-    .nav-links li:nth-child(6){
-        transition: all 1.6s ease 0.9s;
-        margin: 0;
-    }
-    .nav-links li:nth-child(7){
-        transition: all 0.5s ease 1s;
-        margin: 0;
-    }
     li.fade{
         opacity: 1;
     }
-    .logo{
+    /* .logo{
         width: 50%;
-    }
+    } */
 
-}
+
 /*Animating Hamburger Icon on Click*/
 .toggle .line1{
     transition: all 0.7s ease;
@@ -207,4 +189,104 @@ nav{
     margin: "0 auto";
     background:"#0A0A0A";
     box-shadow:'none'
+}
+
+
+.navdiv .navbg {
+    background-color: var(--backgroud-primary);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.imagecarousel {
+    position: relative;
+    overflow: hidden;
+    /* padding: 26px; */
+    width: 100%;
+    /* margin: -10px; */
+}
+
+.imagecontainer1 , .imagecontainer2 {
+    /* padding: 0 10px; */
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.prebtn,
+.nextbtn {
+    border: none;
+    width: 60px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.nextbtn {
+    right: 0;
+}
+
+.nextbtn p,
+.prebtn p {
+    font-size: 50px;
+    background-color: rgba(255, 255, 255, 0.436);
+    box-shadow: 0px 0px 10px 1px black;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.carouselcontainer {
+    width:100%;
+    height: 90%;
+    display: flex;
+    /* justify-content: center; */
+}
+.carouselcontainer .leftimage {
+    width:50%;
+    height:100%;
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.carouselcontainer .rightimage{
+    width:50%;
+    height: 100%;
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.imageclass {
+    /* width:50vw;
+    height: 90vh;
+    overflow: hidden; */
+    /* width: 100%; Ensure the image container takes up the full card width */
+  /* max-width: 100%; Allow image to shrink proportionally */
+  /* max-height: 100%; Allow image to shrink proportionally */
+  /* width:100%;
+  height: 90%; */
+  /* object-fit: contain; */
+  object-fit: cover;
+}
+
+.mycard {
+    /* min-width: 300px;
+    max-width: 300px; */
+    /* width:1500px; */
+    /* height: 90vh; */
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    /* margin: 10px; */
+    color: white;
 }

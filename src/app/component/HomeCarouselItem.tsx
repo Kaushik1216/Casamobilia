@@ -1,6 +1,7 @@
 import React from 'react'
 import { Paper, Button } from '@mui/material'
 import Image from 'next/image'
+import { useState , useEffect } from 'react'
 import styles from '../styles/HomeCorousel.module.css'
 import { motion ,useInView, inView} from "framer-motion"
 import { useRef } from 'react'
@@ -24,6 +25,13 @@ const  HomeCarouselfirst: React.FC<props> = ({key, image})=> {
       }
       const ref = useRef(null);
       const isInView = useInView(ref);
+      const [clientWidth, setClientWidth] = useState(0);
+      const [clientHeight, setClientHeight] = useState(0);
+
+  useEffect(() => {
+    setClientWidth(window.innerWidth * 0.489);
+    setClientHeight((window.innerHeight)*0.85);
+  }, []);
     return (
             // <motion.div className={styles.imagediv} 
             // ref={ref}
@@ -31,31 +39,44 @@ const  HomeCarouselfirst: React.FC<props> = ({key, image})=> {
             // animate={isInView?{opacity:1}:{opacity:0}}
             // transition={{duration:0.5}}
             // >
-        <Paper>
-            {/* <h2>{item.name}</h2>
-            <p>{item.description}</p>
+        // <Paper>
+        //     {/* <h2>{item.name}</h2>
+        //     <p>{item.description}</p>
 
-            <Button className="CheckButton">
-                Check it out!
-            </Button> */}
-            {/* <inView>
+        //     <Button className="CheckButton">
+        //         Check it out!
+        //     </Button> */}
+        //     {/* <inView>
 
-            </inView> */}
-            <div className={styles.imagediv} >
-            <Image
+        //     </inView> */}
+        //     <div className={styles.imagediv} >
+        //     <Image
+        //         src={image.src}
+        //         alt={image.alt}
+        //         // className={styles.imageCorousel}
+        //         // // layout="fill"
+        //         // width={1200}
+        //         // height={600}
+        //         fill={true}
+        //         // object-fit= "cover"
+        //         // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        //         // style={imageStyle}
+        //         />
+        //     </div>
+        // </Paper>
+        <>
+        <div className='mycard'>
+        <Image
                 src={image.src}
                 alt={image.alt}
-                // className={styles.imageCorousel}
-                // // layout="fill"
-                // width={1200}
-                // height={600}
-                fill={true}
-                // object-fit= "cover"
-                // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                // style={imageStyle}
+                /* // className={styles.imageCorousel}
+                // layout="fill" */
+                 width={(clientWidth)}
+                height={(clientHeight)} 
                 />
-            </div>
-        </Paper>
+            {/* <img src={image.src} alt={image.alt}  className='imageclass'/> */}
+        </div>
+        </>
             // </motion.div>
     )
 }

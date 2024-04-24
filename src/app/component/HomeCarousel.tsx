@@ -23,6 +23,26 @@ var images:Iimage[] = [
   },
   {
     alt:"Home Image 1",
+    src:"/image5.jpg",
+    description:"Table Lamp , Cushions , Wall Hanging"
+  },
+  {
+    alt:"Home Image 1",
+    src:"/image6.jpg",
+    description:"Table Lamp , Cushions , Wall Hanging"
+  },
+  {
+    alt:"Home Image 1",
+    src:"/images4.jpg",
+    description:"Table Lamp , Cushions , Wall Hanging"
+  },
+  {
+    alt:"Home Image 1",
+    src:"/images9.jpg",
+    description:"Table Lamp , Cushions , Wall Hanging"
+  },
+  {
+    alt:"Home Image 1",
     src:"/Home1.png",
     description:"Table Lamp , Cushions , Wall Hanging"
   }
@@ -48,28 +68,8 @@ const responsive = {
     };
   return (
     <>
-    <div className='warrapcontainer'>
-      <div className="homecorousel" style={{position:"relative"}}>
-      {/* <Carousel
-      fullHeightHover={false}     // We want the nav buttons wrapper to only be as big as the button element is
-    //   navButtonsProps={{          // Change the colors and radius of the actual buttons. THIS STYLES BOTH BUTTONS
-    //       style: {
-    //           backgroundColor: 'cornflowerblue',
-    //           display:'block'
-    //       }
-    //   }} 
-      navButtonsWrapperProps={{   // Move the buttons to the bottom. Unsetting top here to override default style.
-          style: {
-              display:'block'
-          }
-      }}
-    NextIcon={<Nextslide/>}
-      >
-            {
-                images.map( (image, i) => <HomeCarouselItem key={i} image={image}/> )
-            }
-        </Carousel> */}
-        
+    {/* <div className='warrapcontainer'> */}
+      {/* <div className="homecorousel" style={{position:"relative"}}> */}
         <Carousel 
         responsive={responsive}
         infinite={true}
@@ -83,8 +83,8 @@ const responsive = {
                 images.map( (image, i) => <HomeCarouselItem key={i} image={image}/> )
             }
         </Carousel>
-      </div>
-    </div>
+      {/* </div> */}
+    {/* </div> */}
     </>
 
   )

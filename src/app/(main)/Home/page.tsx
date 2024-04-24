@@ -9,13 +9,15 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../variants'
 import HomeSection2 from '@/app/component/HomeSection2'
+import Imagecarousel from '@/app/component/ImageCarousel'
 export default function Home() {
   return (
     <>
-      <div className='warrapcontainer'>
-        <HomeCarousel />
+      {/* <div className='warrapcontainer'> */}
+      <Imagecarousel/>
+        {/* <HomeCarousel /> */}
         <HomeSection2/>
-        </div>
+        {/* </div> */}
     </>
   )
 }
