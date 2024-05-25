@@ -40,7 +40,8 @@ var images:Iimage[] = [
     alt:"Home Image 1",
     src:"/images9.jpg",
     description:"Table Lamp , Cushions , Wall Hanging"
-  },
+  }
+  ,
   {
     alt:"Home Image 1",
     src:"/Home1.png",

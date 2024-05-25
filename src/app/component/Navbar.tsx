@@ -13,18 +13,24 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [color , setColor] = useState(false);
 
-  const changecolor = ()=>{
-    if(window.scrollY >=90) {
-      setColor(true);
-    } else {
-      setColor(false);
-    }
-  }
+  // const [prevY, setPrevY] = useState(0);
 
-  // useEffect (()=>{
-  //   window.addEventListener('scroll' , changecolor)
-  // },[color])
-  window.addEventListener('scroll' , changecolor);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentY = window.scrollY;
+  //     if (currentY > prevY) {
+  //       setColor(false);
+  //     } else if (currentY < prevY) {
+  //       setColor(true);
+  //     }
+  //     setPrevY(currentY);
+  //   };
+
+  //   window.addEventListener('scroll', handleScroll);
+
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, [prevY]); 
+
   const handleclick = () => {
     setOpen(!open);
   };
@@ -49,6 +55,9 @@ export default function Navbar() {
               quality={100}
             />
           </div>
+          {/* <div className="menu" onClick={handleclick}>
+            Menu
+          </div> */}
           <div
             className={`hamburger ${open ? "toggle" : ""}`}
             onClick={handleclick}

@@ -12,7 +12,7 @@ export default function TopScroll() {
         <KeyboardArrowUpIcon style={{fontSize:"30px",fontWeight:"large"}}/>
       </p>
     }
-    style={{ color: "#FFA400", margin: "0 auto" ,background:"#0A0A0A",boxShadow: '0px 0px 10px 5px rgba(0, 0, 0, 0.5)'}}
+    style={{ color: "#141414", margin: "0 auto" ,background:"#E9E7E4",boxShadow: '#E9E7E4'}}
   />
   )
 }

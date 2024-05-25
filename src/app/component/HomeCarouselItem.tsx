@@ -18,66 +18,24 @@ interface props{
 // https://www.sliderrevolution.com/resources/css-arrow/
 // export default function HomeCarouselfirst() {
 const  HomeCarouselfirst: React.FC<props> = ({key, image})=> {
-    const imageStyle = {
-        borderRadius: '50%',
-        border: '1px solid #fff',
-        width:"100%"
-      }
       const ref = useRef(null);
       const isInView = useInView(ref);
       const [clientWidth, setClientWidth] = useState(0);
       const [clientHeight, setClientHeight] = useState(0);
 
   useEffect(() => {
-    setClientWidth(window.innerWidth * 0.489);
-    setClientHeight((window.innerHeight)*0.85);
+    setClientWidth(window.innerWidth * 0.5);
+    setClientHeight((window.innerHeight)*0.89);
   }, []);
     return (
-            // <motion.div className={styles.imagediv} 
-            // ref={ref}
-            // initial={{opacity:0}}
-            // animate={isInView?{opacity:1}:{opacity:0}}
-            // transition={{duration:0.5}}
-            // >
-        // <Paper>
-        //     {/* <h2>{item.name}</h2>
-        //     <p>{item.description}</p>
-
-        //     <Button className="CheckButton">
-        //         Check it out!
-        //     </Button> */}
-        //     {/* <inView>
-
-        //     </inView> */}
-        //     <div className={styles.imagediv} >
-        //     <Image
-        //         src={image.src}
-        //         alt={image.alt}
-        //         // className={styles.imageCorousel}
-        //         // // layout="fill"
-        //         // width={1200}
-        //         // height={600}
-        //         fill={true}
-        //         // object-fit= "cover"
-        //         // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        //         // style={imageStyle}
-        //         />
-        //     </div>
-        // </Paper>
         <>
-        <div className='mycard'>
         <Image
                 src={image.src}
                 alt={image.alt}
-                /* // className={styles.imageCorousel}
-                // layout="fill" */
                  width={(clientWidth)}
                 height={(clientHeight)} 
                 />
-            {/* <img src={image.src} alt={image.alt}  className='imageclass'/> */}
-        </div>
         </>
-            // </motion.div>
     )
 }
 

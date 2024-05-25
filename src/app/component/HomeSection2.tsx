@@ -21,6 +21,7 @@ export default function HomeSection2() {
             initial="hidden"
             whileInView={"show"}
             viewport={{once:true,amount:0.7}}
+            whileHover={{ scale: 1.05 }}
             >
               <div className={styles.homelogo}>
               <Image
@@ -41,6 +42,7 @@ export default function HomeSection2() {
             initial="hidden"
             whileInView={"show"}
             viewport={{once:true,amount:0.7}}
+            whileHover={{ scale: 1.05 }}
             >
               <div className={styles.homelogo}>
               <Image
@@ -60,7 +62,7 @@ export default function HomeSection2() {
             initial="hidden"
             whileInView={"show"}
             viewport={{once:true,amount:0.7}}
-            whileHover={{ scale: 1.2 }}
+            whileHover={{ scale: 1.05 }}
             >
               <div className={styles.homelogo}>
               <Image
@@ -80,6 +82,7 @@ export default function HomeSection2() {
             initial="hidden"
             whileInView={"show"}
             viewport={{once:true,amount:0.7}}
+            whileHover={{ scale: 1.05 }}
             >
               <div className={styles.homelogo}>
               <Image
