@@ -1,15 +1,80 @@
 import React from 'react'
 import Head from 'next/head'
 import { Metadata } from 'next'
-
+import { Grid } from '@mui/material'
 export const metadata: Metadata = {
     title: "about"
 }
+import Image from 'next/image'
 export default function About() {
   return (
     <>
     <div className='warrapcontainer'>
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, laboriosam optio adipisci nostrum nobis porro? Aperiam ea doloribus praesentium excepturi dicta omnis velit voluptas, perferendis ex? Reprehenderit temporibus officia facilis sint quas esse, vel error tempore veritatis aliquam libero quis perferendis ut. Dolorem labore totam error dicta sit aut asperiores perspiciatis ea quam nesciunt placeat a porro, suscipit exercitationem quisquam qui necessitatibus minima molestias, nam consequuntur. Fuga architecto, ea ad cupiditate pariatur illum recusandae est aspernatur exercitationem nisi corrupti veritatis ducimus! A laboriosam sunt voluptatibus aperiam atque quas repellendus, commodi adipisci ab at nobis! Velit maiores laborum exercitationem cupiditate dolorum! Nam quis ut harum similique quidem hic, quia ducimus temporibus, soluta earum dolore sint a blanditiis. Aliquid unde autem recusandae sit, dolorem quia quam blanditiis maxime, suscipit velit sapiente error natus aperiam magni? Quae, exercitationem fugit. Tenetur voluptate ratione incidunt voluptas non? Ipsa odit dolorem consectetur aliquid soluta. Deserunt quas consequuntur iste repellendus reprehenderit, facilis vel beatae amet animi non provident debitis cum incidunt laborum, quod architecto accusamus et ab unde numquam. Culpa, laborum voluptatem. Nihil ducimus numquam vel! Ea, numquam suscipit vitae repellendus repudiandae tempore qui dignissimos natus nam neque animi eaque ipsum totam in magnam debitis consequuntur est voluptatibus at a dolorum deleniti. Consequatur quidem possimus excepturi, tenetur ratione cupiditate aliquid itaque quam facilis consectetur aut officiis dolorem inventore nostrum adipisci nulla rem accusamus velit! Reiciendis voluptates laudantium dignissimos cumque minima quidem assumenda perferendis impedit porro nostrum! Quia corrupti labore iusto cumque beatae fugiat, illo recusandae? Aspernatur temporibus deleniti cumque. Accusantium nisi eaque ab impedit, molestias incidunt, architecto dolore accusamus sed totam harum tempore doloremque commodi ipsam in ad molestiae cumque sit dolorum facere esse. Quidem ratione ipsa a molestiae laudantium repudiandae maxime cum. Quo repudiandae voluptatum alias tenetur corrupti temporibus dolorum asperiores praesentium labore dignissimos expedita natus, quibusdam iste hic omnis accusamus debitis officia reiciendis dolor odio autem modi odit. Voluptas molestias voluptate placeat rerum iusto fuga perspiciatis beatae error veritatis laboriosam nam minus sed quis aperiam reprehenderit, sunt expedita in dignissimos quos reiciendis eius aliquam quam nulla. Voluptates quae ipsum ut nihil nulla optio vitae laudantium porro molestias. Obcaecati repellendus fuga ullam accusamus amet quidem sed aliquam hic dolore, saepe assumenda maxime laudantium error voluptates officiis impedit! Minus neque saepe cumque beatae sequi maiores odio, commodi aperiam aut a iste nihil sit expedita optio laudantium unde impedit? Cupiditate sapiente facilis atque ut ipsum, nihil adipisci, commodi quod autem, sequi similique! Consequatur modi dolore sed dignissimos, eligendi totam dicta nesciunt sit iusto quod nam dolores recusandae perferendis ut placeat! Facilis unde sunt explicabo, consectetur sapiente optio eligendi quas? Velit laboriosam tempora nostrum ducimus accusantium eum ea reiciendis iusto maxime. Dolor consequuntur maxime quisquam corrupti veritatis eum libero laboriosam quod, asperiores nam aliquam aspernatur ipsa cupiditate molestiae ipsum modi sint eos vitae earum, deserunt et. Quidem laborum molestiae officiis distinctio maiores! Quis maiores esse temporibus consequuntur minus velit tenetur rerum soluta nisi ducimus molestias odio ad mollitia fugiat, tempora, facilis omnis reprehenderit eos cupiditate nesciunt! Officia, non. Maiores eaque labore, voluptate voluptas in consectetur esse ea temporibus reiciendis quidem qui sint. Assumenda et veritatis itaque dignissimos quia facilis sunt culpa, blanditiis quos, atque commodi est dicta corrupti id voluptates voluptatum aliquid ex nobis suscipit veniam praesentium ipsa ducimus sit. Impedit, velit. Corrupti neque cupiditate optio eveniet perferendis accusamus eaque omnis blanditiis libero sunt. Ullam natus libero, ipsum ad quisquam quae dignissimos odit eaque saepe error, provident vero cupiditate molestias at similique ratione laborum quibusdam! Esse at itaque, veniam, eos consequuntur dolores officiis adipisci voluptas reiciendis voluptates tempora neque maxime corporis reprehenderit ipsum cupiditate quia ducimus exercitationem dicta nostrum. Voluptatem consequuntur voluptates accusamus autem maiores maxime dolore sunt dolorem facilis suscipit rem beatae excepturi architecto non ex explicabo eligendi incidunt quam eaque aliquid debitis iusto temporibus, sint ut! Minus, minima officiis dicta, sequi neque dolorem ex quibusdam deleniti pariatur quam reiciendis, commodi eius velit aut non dolore consectetur soluta in veniam nam ratione cumque? Eum vero architecto excepturi, earum hic iusto eveniet aliquam non natus fugiat suscipit voluptatibus corporis nostrum autem porro iste, veniam neque expedita, explicabo qui tempore consequuntur sapiente. Ullam, consequatur? Provident labore maiores dolore sunt quaerat atque, enim eaque sed, eligendi, recusandae culpa molestias nesciunt saepe. Ut, repellat pariatur temporibus error optio nemo suscipit soluta sunt animi dignissimos libero sed quo illo est totam eum a officia ipsam eligendi, eius, cumque possimus molestiae praesentium. Qui eius nisi provident placeat impedit eos non aspernatur consequatur similique alias culpa eaque vero, facilis reprehenderit? Explicabo cupiditate tempore, laboriosam, architecto odio aperiam laborum pariatur itaque ab qui neque quae maxime similique soluta quam magni consequatur voluptates tempora sint eos. Ducimus, natus dolorem! Totam cumque qui rem maxime voluptatibus, omnis, modi veritatis incidunt ea minus autem velit illo harum deleniti ratione dignissimos numquam aliquam. Eius saepe facilis beatae incidunt libero ea deserunt ipsa soluta, iusto optio itaque ipsam sunt veniam vitae aliquam! Officia cumque enim veritatis, dignissimos eius beatae earum odit voluptate harum iusto omnis iure neque perferendis adipisci placeat. Tempora, animi explicabo fugiat culpa porro officiis ullam voluptates accusantium quia eaque illum voluptas voluptatibus dolores accusamus sit perferendis repellat eveniet deleniti nihil quos iure fugit. Vitae repellendus quidem adipisci sed fugit laudantium, doloribus atque impedit consequuntur cupiditate deleniti eius molestias officia quibusdam, et quia, necessitatibus esse deserunt. Est iusto alias facilis officiis! Expedita placeat ipsam quibusdam provident dolorum excepturi consequuntur quo sunt. Ducimus doloribus voluptates quisquam esse asperiores ut nulla ipsa consectetur voluptas, sed saepe earum nobis porro hic ratione consequatur ipsam facere provident illo odit facilis error id. Voluptates in tempora pariatur est iste! Nam, aspernatur blanditiis labore ducimus consequuntur eos nesciunt molestiae laudantium ea rem vel repellat nobis possimus reiciendis libero illum accusamus inventore et! Optio similique quas recusandae illo deserunt qui, magni molestiae ab, vero impedit accusamus architecto consequatur ea assumenda hic obcaecati, non vel excepturi! Optio labore id consectetur quas velit sunt consequatur illum quos iure cumque. Eligendi odio delectus blanditiis minus suscipit dignissimos dolor enim dolores optio, maiores autem a numquam labore voluptatem nam placeat!</div>
+    <div>
+      <Grid container>
+      <Grid item xs={12} md={6} sm={6}>
+        <div>
+          <Image
+            src=''
+            alt=''
+            width={100}
+            height={100}
+          />
+        </div>
+      </Grid>
+      <Grid item xs={12} md={6} sm={6}>
+          <div className='abouttext1'>
+          The name “CASA MOBILIA” defines Finest Bespoke Furniture & Interiors. The brand embodies global refinement and an indigenous design sense, reflective of a contemporary & timeless design.
+
+          Casa Mobilia by Aakarshan Furniture Systems was founded in 2012 by Ankit Agarwal & Sadhna Goyal to take care of the retail end of the business of design. Casa Mobilia is the place where all high end furniture & interior design ideas can find their expression. The designer furniture store showcases unique pieces that highlight the intrinsic quality of both the traditional and a new India and hosts a truly stunning array of topical pieces in an exciting range of colours and styles which are customizable based on client requirements. Our benchmarks for quality craftsmanship coupled with design innovation makes every piece a collectable and every collection an artistic legacy.
+
+          The Casa Mobilia store epitomizes luxurious elements and experimental shapes taking life-style design to a new realm of sheer indulgence. Mr. Ankit’s collection has everything from sofas and tables, cushions, Beds and Led Units, Dinings and Buffets & anything/everything in furniture.
+
+          As Mr. Ankit puts it, ‘I have always given my imagination a free run. What emerges is really a fusion of modern and contemporary’. So one might refer to his style as a mix of tradition and today but he is happy being called a “contemporary classic”.
+
+          Ankit Agarwal’s exceptional taste and unconventional approach to design has made his one of the most sought after Furniture designers & Interior executers in India. From fabrics to furniture, home décor to curtains his designs are luxurious yet vibrant at the same time. His accomplishments can be attributed to his talent, drive, determination and a pure love for beauty in design.
+
+          Casa Mobilia by Aakarshan Furniture Systems have evolved into pioneers nationally. Ankit Agarwal’s designs encompasses an array of private and commercial projects while Casa Mobilia enhances the evolution of design with revered regular launches of awe inspiring new collections from its design studios.
+
+          The lineage of artistic influence reverberates in every project with a design philosophy focusing on innovation and sustainability while emphasizing a refined use of art, magnificent objects, patterns, strong silhouettes, textures and a sophisticated color palette, that is balanced to provide a refined original signature.
+
+          In a synopsis, Casa Mobilia endeavors to constantly better its best, and continue to be recognized as Delhi Ncr’s foremost luxury furniture & interiors brand.
+          </div>
+      </Grid>
+      </Grid>
+
+      <Grid container>
+        <Grid item xs={12} md={6} sm={6} paddingTop={10}>
+        <div className='abouttext1'>
+          The name “CASA MOBILIA” defines Finest Bespoke Furniture & Interiors. The brand embodies global refinement and an indigenous design sense, reflective of a contemporary & timeless design.
+
+          Casa Mobilia by Aakarshan Furniture Systems was founded in 2012 by Ankit Agarwal & Sadhna Goyal to take care of the retail end of the business of design. Casa Mobilia is the place where all high end furniture & interior design ideas can find their expression. The designer furniture store showcases unique pieces that highlight the intrinsic quality of both the traditional and a new India and hosts a truly stunning array of topical pieces in an exciting range of colours and styles which are customizable based on client requirements. Our benchmarks for quality craftsmanship coupled with design innovation makes every piece a collectable and every collection an artistic legacy.
+
+          The Casa Mobilia store epitomizes luxurious elements and experimental shapes taking life-style design to a new realm of sheer indulgence. Mr. Ankit’s collection has everything from sofas and tables, cushions, Beds and Led Units, Dinings and Buffets & anything/everything in furniture.
+
+          As Mr. Ankit puts it, ‘I have always given my imagination a free run. What emerges is really a fusion of modern and contemporary’. So one might refer to his style as a mix of tradition and today but he is happy being called a “contemporary classic”.
+
+          Ankit Agarwal’s exceptional taste and unconventional approach to design has made his one of the most sought after Furniture designers & Interior executers in India. From fabrics to furniture, home décor to curtains his designs are luxurious yet vibrant at the same time. His accomplishments can be attributed to his talent, drive, determination and a pure love for beauty in design.
+
+          Casa Mobilia by Aakarshan Furniture Systems have evolved into pioneers nationally. Ankit Agarwal’s designs encompasses an array of private and commercial projects while Casa Mobilia enhances the evolution of design with revered regular launches of awe inspiring new collections from its design studios.
+
+          The lineage of artistic influence reverberates in every project with a design philosophy focusing on innovation and sustainability while emphasizing a refined use of art, magnificent objects, patterns, strong silhouettes, textures and a sophisticated color palette, that is balanced to provide a refined original signature.
+
+          In a synopsis, Casa Mobilia endeavors to constantly better its best, and continue to be recognized as Delhi Ncr’s foremost luxury furniture & interiors brand.
+          </div>
+        </Grid>
+        <Grid item xs={12} md={6} sm={6} paddingTop={10}>
+        <div>
+          <Image
+            src=''
+            alt=''
+            width={100}
+            height={100}
+          />
+        </div>
+        </Grid>
+      </Grid>
+    </div>
     </div>
     </>
   )

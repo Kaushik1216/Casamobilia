@@ -6,10 +6,13 @@ import styles from '../styles/HomeCorousel.module.css'
 import { motion ,useInView, inView} from "framer-motion"
 import { useRef } from 'react'
 interface Iimage {
-    alt:string,
-    src:string,
-    description:string  
-}
+    alt: string,
+    srcleft: string,
+    srcright:string,
+    projectname:string,
+    projectplace:string,
+    bgcolor:string
+  }
 
 interface props{
     key:Number,
@@ -24,17 +27,17 @@ const  HomeCarouselfirst: React.FC<props> = ({key, image})=> {
       const [clientHeight, setClientHeight] = useState(0);
 
   useEffect(() => {
-    setClientWidth(window.innerWidth * 0.5);
-    setClientHeight((window.innerHeight)*0.89);
+    setClientWidth(window.innerWidth * 0.50);
+    setClientHeight((window.innerHeight)*0.88);
   }, []);
     return (
         <>
         <Image
-                src={image.src}
+                src={image.srcleft}
                 alt={image.alt}
-                 width={(clientWidth)}
+                width={(clientWidth)}
                 height={(clientHeight)} 
-                />
+        />
         </>
     )
 }

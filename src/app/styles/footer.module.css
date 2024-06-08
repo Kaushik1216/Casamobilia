@@ -1,0 +1,36 @@
+.footercontainer {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 3%;
+    background-color: var(--backgroud-primary);
+    font-size: large;
+}
+
+.socialdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.socialhr {
+        background-color: #000000; /* Change color as needed */
+        height: 0.8px;
+        margin: 10px;
+        width: 35%;
+        /* border:0px solid #000000; */
+}
+
+.footersvg {
+    height:30px;
+    width:30px;
+}
+
+@media screen and (max-width:870px) {
+    .socialhr {
+        display: none;
+        width:10%;
+    }
+}

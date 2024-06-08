@@ -5,10 +5,15 @@ import { useState, useEffect } from 'react'
 import styles from '../styles/HomeCorousel.module.css'
 import { motion, useInView, inView } from "framer-motion"
 import { useRef } from 'react'
+import { Opacity } from '@mui/icons-material'
+
 interface Iimage {
     alt: string,
-    src: string,
-    description: string
+    srcleft: string,
+    srcright:string,
+    projectname:string,
+    projectplace:string,
+    bgcolor:string
 }
 
 interface props {
@@ -29,22 +34,39 @@ const HomeCarouselfirst: React.FC<props> = ({ key, image }) => {
     const [clientHeight, setClientHeight] = useState(0);
 
     useEffect(() => {
-        setClientWidth(window.innerWidth * 0.5);
-        setClientHeight((window.innerHeight) * 0.70);
+        setClientWidth(window.innerWidth * 0.40);
+        setClientHeight((window.innerHeight) * 0.691);
     }, []);
     const myStyle = {
-        border: '30px solid #ccc', // Adjust border style, width, and color as needed
-        // padding: '10px', // Adjust padding as needed
+        border: `74px solid ${image.bgcolor}`
     };
     // console.log("me :      ",{key}," : ", clientWidth);
+   const animVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { duration: 1}
+        }
+    }
     return (
         <>
+        <div style={myStyle} className={styles.rightimagecontainer}>
             <Image
-                src={image.src}
+                src={image.srcright}
                 alt={image.alt}
                 width={(clientWidth)}
                 height={(clientHeight)}
-            />
+                style={{marginBottom:"-4px"}}
+                />
+            <motion.div className={styles.rightcontainertext}
+            variants={animVariants}
+            initial="hidden"
+            whileInView="visible">
+                <p style={{fontSize:"18px" , fontWeight:"bolder"}}>{image.projectname}</p>
+                <p style={{fontSize:"15px"}}>{image.projectplace}</p>
+            </motion.div>
+        </div>
+
         </>
     )
 }

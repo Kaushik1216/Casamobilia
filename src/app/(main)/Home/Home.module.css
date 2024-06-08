@@ -33,14 +33,16 @@
 .block{
     /* width:200px;
     height: 200px; */
-    border: 1px solid  var(--background-dark);
+    border: 1px solid  var(--secondary-color);
     padding:7%;
     border-radius: 5%;
     transition: ;
 }
 .block:hover {
-    background-color: var(--background-dark);
+    background-color: var(--secondary-color);
 }
+
+
 @media screen and (max-width: 800px){
 
     .homehead{

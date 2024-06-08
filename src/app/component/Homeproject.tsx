@@ -21,7 +21,7 @@ interface Idata {
 var alldata: Idata[] = [
     {
         src: '/furniture.png',
-        alt: 'FURNITURE',
+        alt: 'FURNITURES',
         dir: "right",
         classname: "bannerimagebig",
         bgcolor: '#D7D7D7',
@@ -57,7 +57,7 @@ var alldata: Idata[] = [
     },
     {
         src: '/lighting.png',
-        alt: 'LIGHTING',
+        alt: 'LIGHTINGS',
         dir: "up",
         classname: "bannerimagesmall",
         bgcolor: '#F25D54',
@@ -69,7 +69,7 @@ var alldata: Idata[] = [
     },
     {
         src: '/products.png',
-        alt: 'PRODUCT',
+        alt: 'PRODUCTS',
         dir: "up",
         classname: "bannerimagesmall",
         bgcolor: '#6B57B9',

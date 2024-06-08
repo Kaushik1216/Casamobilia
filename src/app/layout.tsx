@@ -5,6 +5,7 @@ import "./globals"
 // const inter = Inter({ subsets: ["latin"] });
 import Navbar from "./component/Navbar";
 import TopScroll from "./component/TopScroll";
+import Footer from "./component/Footer";
 // import Layout from "./(main)/page";
 // export const metadata: Metadata = {
 //   title: "Create Next App",
@@ -49,8 +50,9 @@ export default function RootLayout({
       <body>
         {/* <div className="container" style={{marginTop:"100px"}}> */}
             <Navbar/>
-            {children}
-            <TopScroll/>
+            {children} 
+            <Footer/>
+            <TopScroll/> 
         {/* </div> */}
         </body>
     </html>

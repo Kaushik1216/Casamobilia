@@ -2,7 +2,7 @@
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState  , useRef} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Grid } from "@mui/material";
@@ -11,26 +11,7 @@ import { fadeIn } from "../(main)/variants";
 import '../globals.css'
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [color , setColor] = useState(false);
-
-  // const [prevY, setPrevY] = useState(0);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const currentY = window.scrollY;
-  //     if (currentY > prevY) {
-  //       setColor(false);
-  //     } else if (currentY < prevY) {
-  //       setColor(true);
-  //     }
-  //     setPrevY(currentY);
-  //   };
-
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, [prevY]); 
-
+  const ref = React.useRef<HTMLInputElement>(null);
   const handleclick = () => {
     setOpen(!open);
   };
@@ -39,10 +20,18 @@ export default function Navbar() {
     height: "90%",
   };
 
+  useEffect (()=>{
+    let handler = (e)=>{
+      if(!(ref!=null && ref.current.contains(e.target))){
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown" , handler);
+  })
   return (
     <>
-      <div className='navdiv'>
-        <nav className={color?'navbg':''}>
+      <div className='navdiv' ref={ref}>
+        <nav>
         {/* <nav style={{backgroundColor:`${color?`#E9E7E4`:``}`}} className={color?'navbg':''}> */}
           <div className="logo">
             <Image
@@ -55,12 +44,13 @@ export default function Navbar() {
               quality={100}
             />
           </div>
-          {/* <div className="menu" onClick={handleclick}>
-            Menu
-          </div> */}
+          <div className="menu" onClick={handleclick} style={{display:`${open ? "none":""}`}}>
+            MENU<span></span><span></span><span></span><span></span>
+          </div>
           <div
-            className={`hamburger ${open ? "toggle" : ""}`}
+            className={`${open ? "hamburger toggle" : ""}`}
             onClick={handleclick}
+            style={{display:`${open ? "":"none"}`}}
           >
             <div className="line1"></div>
             <div className="line2"></div>

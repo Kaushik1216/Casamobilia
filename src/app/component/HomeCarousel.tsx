@@ -71,7 +71,7 @@ const responsive = {
     <>
     {/* <div className='warrapcontainer'> */}
       {/* <div className="homecorousel" style={{position:"relative"}}> */}
-        <Carousel 
+        {/* <Carousel 
         responsive={responsive}
         infinite={true}
         autoPlay={true}
@@ -83,7 +83,7 @@ const responsive = {
             {
                 images.map( (image, i) => <HomeCarouselItem key={i} image={image}/> )
             }
-        </Carousel>
+        </Carousel> */}
       {/* </div> */}
     {/* </div> */}
     </>
