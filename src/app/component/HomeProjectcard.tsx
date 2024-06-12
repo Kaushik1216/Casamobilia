@@ -5,6 +5,7 @@ import '../styles/HomeProject.module.css'
 import { fadeIn } from '../(main)/variants'
 import { redirect } from 'next/navigation'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image';
 type FadeDirection = "up" | "down" | "left" | "right";
 
 interface Idata {
@@ -43,25 +44,30 @@ const  HomeProjectcard: React.FC<props> = ({data})=>{
     }
     const router = useRouter()
   return (
-    
+<>
+{
+(data.classname=='bannerimagebig') ?(
+
     <motion.div className={styles.projectcontainer}
-                        whileHover={{
-                            backgroundColor: data.bgcolor,
-                            transition: { delay: 0.2 }
-                        }}
-                    style={spacingcontainer}
-                    onClick={() => router.push('/project/'+((data.alt).toLowerCase()))}>
-                        <motion.div className={data.classname}
-                            style={{
-                                backgroundImage: `url(${data.src})`,
-                                width:`${data.width}` 
-                            }}
+    whileHover={{
+        backgroundColor: data.bgcolor,
+        transition: { delay: 0.2 }
+    }}
+    style={spacingcontainer}
+                        onClick={() => router.push('/project/'+((data.alt).toLowerCase()))}>
+                        <motion.div className={styles.bannerimagebig}
+                            // style={{
+                            //     backgroundImage: `url(${data.src})`,
+                            //     width:`${data.width}` 
+                            // }}
                             variants={fadeIn("up", 0.2, 30)}
                             initial="hidden"
                             whileInView={"show"}
                             viewport={{ once: true, amount: 0.8 }}
                             whileHover={"hover"}
-                        >
+                            whileTap={"hover"}
+                            >
+                            <Image src={data.src} alt='' layout='fill'/>
                             <motion.p className={styles.projecthead}
                                 variants={fadeIn("up", 0.2, 20)}
                                 initial="hidden"
@@ -70,12 +76,49 @@ const  HomeProjectcard: React.FC<props> = ({data})=>{
                                 {data.alt}
                             </motion.p>
                         </motion.div>
-                        <motion.div className={styles.projectheadhover}>
+                        {/* <motion.div className={styles.projectheadhover}>
                             <p>
                                 Click to Explore More
                             </p>
-                        </motion.div>
+                        </motion.div> */}
                     </motion.div>
+) : (
+    <motion.div className={styles.projectcontainer}
+    whileHover={{
+        backgroundColor: data.bgcolor,
+        transition: { delay: 0.2 }
+    }}
+    style={spacingcontainer}
+                        onClick={() => router.push('/project/'+((data.alt).toLowerCase()))}>
+                        <motion.div className={styles.bannerimagesmall}
+                            // style={{
+                            //     backgroundImage: `url(${data.src})`,
+                            //     width:`${data.width}` 
+                            // }}
+                            variants={fadeIn("up", 0.2, 30)}
+                            initial="hidden"
+                            whileInView={"show"}
+                            viewport={{ once: true, amount: 0.8 }}
+                            whileHover={"hover"}
+                            >
+                            <Image src={data.src} alt='' layout='fill'/>
+                            <motion.p className={styles.projecthead}
+                                variants={fadeIn("up", 0.2, 20)}
+                                initial="hidden"
+                                whileInView={"show"}
+                                viewport={{ once: true, amount: 0.8 }}>
+                                {data.alt}
+                            </motion.p>
+                        </motion.div>
+                        {/* <motion.div className={styles.projectheadhover}>
+                            <p>
+                                Click to Explore More
+                            </p>
+                        </motion.div> */}
+                    </motion.div>
+  )
+}
+</>
   )
 }
 

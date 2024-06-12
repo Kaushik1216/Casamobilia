@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Baskervville", serif;
 }
 
 :root {
@@ -22,6 +21,11 @@ body {
     color: var(--text-color);
 }
 
+input {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
 /* Navabar CSS */
 
 nav {
@@ -52,6 +56,7 @@ nav {
     align-items: center;
     justify-content: flex-start;
     z-index: 20000;
+    /* backdrop-filter: blur(20px);  */
 }
 
 
@@ -139,7 +144,7 @@ nav {
 .menu {
     position: absolute;
     right: 3%;
-    top: 25%;
+    top: 21%;
     font-size: 15px;
     font-weight: bolder;
     margin-right: -6px;
@@ -249,7 +254,6 @@ li.fade {
         width: 50%;
     } */
 
-
 /*Animating Hamburger Icon on Click*/
 .toggle .line1 {
     transition: all 0.7s ease;
@@ -338,7 +342,7 @@ li.fade {
 .carouselcontainer .rightimage {
     /* position: relative;   */
     width: 50%;
-    height: 100%;
+    height: 80%;
     display: flex;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -375,7 +379,7 @@ hr {
     font-size: large;
     text-align: justify;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 857px) {
     .nav-links {
         width:100%;
         font-size: 25px;
@@ -385,6 +389,10 @@ hr {
         margin: 2rem;
         margin-top: 4.5rem;
     }
+    .loadingdiv svg {
+        width:80%;
+        height: 30%;
+    }
 }
 @media screen and (max-width: 600px) {
     .menu {
@@ -392,7 +400,6 @@ hr {
         right: 4%;
     }
 
-    
 
     .Totop {
         position: absolute;
@@ -400,4 +407,354 @@ hr {
         right: 5%!important; 
         /* margin: -10px; */
     }
+    .logo {
+        width: 40%;
+    }
 }
+
+/* COntact US*/
+  input {
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    color:var(--background-dark);
+  }
+  
+  .app-form-group {
+    margin-bottom: 20px;
+  }
+  
+  .app-form-group.message {
+    margin-top: 40px;
+    color:var(--background-dark);
+    font-weight: 600;
+  }
+  
+  .app-form-group.buttons {
+    margin-bottom: 0;
+    text-align: right;
+  }
+  
+  .app-form-control {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #666;
+    color:var(--background-dark);
+    font-size: 14px;
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color .2s;
+  }
+  
+  .app-form-control::placeholder {
+    color:var(--background-dark);
+  }
+  
+  .app-form-control:focus {
+    border-bottom-color: #ddd;
+  }
+  
+  .formcontainer {  
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 40px;
+  }
+  .app-form{
+    width: 80%;
+    padding: 10px;
+  }
+  .contact {
+    height:100vh;
+  }
+  .contactpage{
+    background-color: var(--backgroud-primary);
+    /* border: 1px solid var(--background-dark); */
+  }
+  .contactus {
+    font-size: 4rem;
+    font-weight: bolder;
+    /* text-align: center; */
+    padding-top: 3%;
+    padding-left: 13%;
+  }
+  .imageclass{
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+  }
+  .app-form-button2 {
+    padding: 10px;
+    font-weight: 900;
+    width: 100%;
+    padding: 0.7em 3em;
+    border: 2px solid var(--background-dark);
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: var(--background-dark);
+  }
+
+.app-form-button2::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: var(--secondary-color);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+.app-form-button2 :hover::before {
+    width: 105%;
+}
+
+.app-form-button2:hover {
+    color: var(--backgroud-primary);
+    background: var(--secondary-color);
+} 
+.app-form-button1{
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+  @media screen and (max-width: 1050px) {
+    .contactus{
+        font-size: 2.5rem;
+        /* text-align: center; */
+        margin: 0px;
+        padding-left: 70px;
+    }
+  } 
+  @media screen and (max-width: 852px) { 
+    .contactus {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bolder;
+        padding: 0;
+    }
+    .contact {
+        height:80vh;
+        /* margin-top: -4.5vh; */
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .contact {
+        height:52vh;
+        /* margin-top: -4.5vh; */
+    }
+    .formcontainer {   
+        padding:0px
+    }
+    .app-form{
+        margin-top: 10px;
+        width: 80%;
+    }
+    .contactus {
+        font-size: 2rem;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .contact {
+        height:420px;
+        /* margin-top: -4.5vh; */
+    }
+  }
+
+  
+
+  /* Home carousel Images */
+  /* .carousel {
+    display: flex;
+    height: 90vh;
+    width: 100%;
+    max-width: 800px;
+    justify-content: center;
+    align-items: center;
+  } */
+  .carouselleft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Set image width to 100% of container */
+    height: 100%;
+  }
+  .carouselright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+  }
+  .carouselright .carousel{
+    height: 80vh;
+    width: 80%;
+    padding: 60px;
+  }
+  .carouselleft .carousel1{
+    width: 100%; /* Set image width to 100% of container */
+    height: 100%; /* Set image height to 100% of container */
+    object-fit: cover;
+  }
+  /* .carousel {
+    display: flex;
+    height: 400px;
+    width: 100%;
+    max-width: 800px;
+  } */
+  
+  .carousel_wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  .carousel_card {
+    display: flex;
+    flex: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s ease-in-out;
+    box-sizing: border-box;
+    animation-fill-mode: forwards;
+  }
+  .carousel_card-active {
+    opacity: 1;
+    transform: translateX(0%);
+    /* pointer-events: visible; */
+  }
+
+  .card_image {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .card_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    padding: 40px 30px;
+    align-items: flex-end;
+  }
+  
+  .card_title {
+    color: white;
+    font-size: 30px;
+  }
+  .carouselcontainer{
+    position: relative;
+  }
+  .carousel_arrow_left,
+  .carousel_arrow_right {
+    position: absolute;
+    font-size: 40px;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding-bottom: 7px;
+    cursor: pointer;
+  }
+  
+  .carousel_arrow_left {
+    left: 15px;
+  }
+  
+  .carousel_arrow_right {
+    right: 15px;
+  }
+  
+  .carousel_pagination {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  
+  .pagination_dot {
+    height: 10px;
+    width: 10px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+.pagination_dot:hover {
+    transform: scale(1.2);
+}
+  
+.pagination_dot-active {
+   background-color: steelblue;
+}
+
+.imagetextcontainer1{
+    position: absolute;
+    bottom: 2.5%;
+    left:55%;
+    text-align: left;
+    font-weight: 800;
+    color: var(--backgroud-primary);
+}
+.imagetextcontainer2{
+    display: none;
+    text-align: left;
+    font-weight: 800;
+    color: var(--backgroud-primary);
+}
+  @media screen and (max-width:750px) {
+    .carouselright .carousel{
+        height: 60vh;
+        width: 100%;
+        padding: 0px;
+    }
+  }
+
+  @media screen and (max-width:600px) {
+    .carousel_arrow_left,
+    .carousel_arrow_right {
+      top:95%; 
+    }
+    .imagetextcontainer1{
+        display: none;
+    }
+    .imagetextcontainer2{
+        position: absolute;
+        display: block;
+        width: 100%;
+        text-align: center;
+        top:93%;
+    }
+    .carouselleft {
+      display: none;
+    }
+  }
+
+  

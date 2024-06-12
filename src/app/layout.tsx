@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-// import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import "./globals"
-// const inter = Inter({ subsets: ["latin"] });
+const inter = Roboto({ weight:'400', subsets: ["latin"] });
 import Navbar from "./component/Navbar";
 import TopScroll from "./component/TopScroll";
 import Footer from "./component/Footer";
@@ -47,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* <Navbar/> */}
-      <body>
+      <body className={inter.className}>
         {/* <div className="container" style={{marginTop:"100px"}}> */}
             <Navbar/>
             {children} 

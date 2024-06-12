@@ -28,7 +28,7 @@ const Projectcom: React.FC<props> = ({ key, data }) => {
           animate="hidden"
           whileHover="show"
         >
-            <img src={data.bgimg} alt="" />
+            <Image src={data.bgimg} alt='' layout='fill'/>
             <div className={styles.overlay}>
                 <motion.p className={styles.head1} variants={fadeIn('right' ,0.1, 40)}>{data.name}</motion.p>
                 <motion.p className={styles.head2} variants={fadeIn('right' ,0.2, 40)}>{data.place} {data.location}</motion.p>

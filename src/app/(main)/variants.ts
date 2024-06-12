@@ -7,8 +7,8 @@ export const fadeIn = (direction:FadeDirection , del:number , distance:number) =
             opacity: 0,
         },
         show: {
-            y: 0,
             x: 0,
+            y: 0,
             opacity: 1,
             transition: {
               type: "tween",

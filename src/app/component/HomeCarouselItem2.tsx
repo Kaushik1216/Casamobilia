@@ -34,11 +34,13 @@ const HomeCarouselfirst: React.FC<props> = ({ key, image }) => {
     const [clientHeight, setClientHeight] = useState(0);
 
     useEffect(() => {
+        console.log(" width : " , window.innerWidth);
+        console.log(" height : " , window.innerHeight);
         setClientWidth(window.innerWidth * 0.40);
         setClientHeight((window.innerHeight) * 0.691);
     }, []);
     const myStyle = {
-        border: `74px solid ${image.bgcolor}`
+        border: `${window.innerWidth * 0.048}px solid ${image.bgcolor}`
     };
     // console.log("me :      ",{key}," : ", clientWidth);
    const animVariants = {
@@ -50,7 +52,7 @@ const HomeCarouselfirst: React.FC<props> = ({ key, image }) => {
     }
     return (
         <>
-        <div style={myStyle} className={styles.rightimagecontainer}>
+        <div style ={myStyle} className={styles.rightimagecontainer}>
             <Image
                 src={image.srcright}
                 alt={image.alt}
@@ -58,13 +60,16 @@ const HomeCarouselfirst: React.FC<props> = ({ key, image }) => {
                 height={(clientHeight)}
                 style={{marginBottom:"-4px"}}
                 />
-            <motion.div className={styles.rightcontainertext}
+            {/* <motion.div className={styles.rightcontainertext}
             variants={animVariants}
             initial="hidden"
-            whileInView="visible">
+            whileInView="visible"> */}
+            <div className={styles.rightcontainertext}>
+
                 <p style={{fontSize:"18px" , fontWeight:"bolder"}}>{image.projectname}</p>
                 <p style={{fontSize:"15px"}}>{image.projectplace}</p>
-            </motion.div>
+            </div>
+            {/* </motion.div> */}
         </div>
 
         </>

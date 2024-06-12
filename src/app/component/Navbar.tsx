@@ -33,11 +33,11 @@ export default function Navbar() {
       <div className='navdiv' ref={ref}>
         <nav>
         {/* <nav style={{backgroundColor:`${color?`#E9E7E4`:``}`}} className={color?'navbg':''}> */}
-          <div className="logo">
+          <div className="logo" >
             <Image
               priority={true}
               src="/logo.png"
-              width={115}
+              width={100}
               height={70}
               alt="Casamobilia logo"
               style={logostyle}
@@ -93,7 +93,7 @@ export default function Navbar() {
                 <a>portfolio</a>
               </motion.li>
             </Link>
-            <Link href="" style={{ textDecoration: "none" }}>
+            <Link href="/" style={{ textDecoration: "none" }}>
               <motion.li
                 className={`${open ? "fade" : ""}`}
                 onClick={handleclick}
@@ -105,7 +105,7 @@ export default function Navbar() {
                 <a>Projects</a>
               </motion.li>
             </Link>
-            <Link href="" style={{ textDecoration: "none" }}>
+            <Link href="/contact" style={{ textDecoration: "none" }}>
               <motion.li
                 className={`${open ? "fade" : ""}`}
                 onClick={handleclick}

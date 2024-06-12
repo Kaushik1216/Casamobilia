@@ -20,7 +20,7 @@ export default function HomeSection2() {
             variants={fadeIn("up" , 0.2,40)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{once:true,amount:0.7}}
+            viewport={{once:true,amount:0.3}}
             whileHover={{ scale: 1.05 }}
             >
               <div className={styles.homelogo}>
@@ -36,12 +36,12 @@ export default function HomeSection2() {
             </motion.div>
           </Grid>
          
-          <Grid container item  xs={12} md={3} sm={6}>
+          <Grid container item xs={12} md={3} sm={6}>
           <motion.div className={styles.block}
             variants={fadeIn("up" , 0.2,40)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{once:true,amount:0.7}}
+            viewport={{once:true,amount:0.3}}
             whileHover={{ scale: 1.05 }}
             >
               <div className={styles.homelogo}>
@@ -61,7 +61,7 @@ export default function HomeSection2() {
             variants={fadeIn("up" , 0.2,40)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{once:true,amount:0.7}}
+            viewport={{once:true,amount:0.3}}
             whileHover={{ scale: 1.05 }}
             >
               <div className={styles.homelogo}>
@@ -81,7 +81,7 @@ export default function HomeSection2() {
             variants={fadeIn("up" , 0.2,40)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{once:true,amount:0.7}}
+            viewport={{once:true,amount:0.3}}
             whileHover={{ scale: 1.05 }}
             >
               <div className={styles.homelogo}>
