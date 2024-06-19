@@ -53,7 +53,7 @@ export default function HomeSection2() {
               ></Image>
               </div>
               <p  className={styles.homesubhead}>Qualified Designer</p>
-              <p className={styles.homepara}>Our employees are best of the field across the city</p>
+              <p className={styles.homepara}>Our employees are best of the field across the city </p>
             </motion.div>
           </Grid>
           <Grid container item  xs={12} md={3} sm={6}>
@@ -73,7 +73,7 @@ export default function HomeSection2() {
               ></Image>
               </div>
               <p  className={styles.homesubhead}>High-End Design</p>
-              <p className={styles.homepara}>We deliver the best service in the market</p>
+              <p className={styles.homepara}>We deliver the best service in the market.</p>
             </motion.div>
           </Grid>
           <Grid container item  xs={12} md={3} sm={6}>

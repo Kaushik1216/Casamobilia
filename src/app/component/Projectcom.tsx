@@ -4,6 +4,11 @@ import styles from '../styles/project.module.css'
 import { motion} from "framer-motion";
 import Image from 'next/image';
 import { fadeIn } from '../(main)/variants';
+import Modal from '@mui/material/Modal';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import { useState , useEffect } from 'react';
 interface Idata {
     name: string,
     place: string,
@@ -18,23 +23,134 @@ interface props {
 
 
 const Projectcom: React.FC<props> = ({ key, data }) => {
-      const arrow = {
-        initial: { rotate: 0, scale: 1 },
-        animate: { rotate: 90, scale: 1.5 },
-      }
+      const [open, setOpen] = React.useState(false);
+      const handleOpen = () => setOpen(true);
+      const handleClose = () => setOpen(false);
+      const images = [
+        {
+          image: "/krishnakunj1.jpg",
+          title: "Brazil",
+        },
+        {
+          image: "/krishnakunj2.jpg",
+          title: "China",
+        },
+        {
+          image: "/vivekji1.jpg",
+          title: "France",
+        },
+        {
+          image: "/vivekji2.jpg",
+          title: "Japan",
+        }
+      ];
+      
+      const [current, setCurrent] = useState(0);
+      const [autoPlay, setAutoPlay] = useState(true);
+      let timeOut = null;
+    
+      useEffect(() => {
+        timeOut =
+          autoPlay &&
+          setTimeout(() => {
+            slideRight();
+          }, 2500);
+      });
+    
+      const slideRight = () => {
+        setCurrent(current === images.length - 1 ? 0 : current + 1);
+      };
+    
+      const slideLeft = () => {
+        setCurrent(current === 0 ? images.length - 1 : current - 1);
+      };
     return (
+        <>
         <motion.div className={styles.container}
           initial="hidden"
           animate="hidden"
           whileHover="show"
-        >
+          >
             <Image src={data.bgimg} alt='' layout='fill'/>
             <div className={styles.overlay}>
                 <motion.p className={styles.head1} variants={fadeIn('right' ,0.1, 40)}>{data.name}</motion.p>
                 <motion.p className={styles.head2} variants={fadeIn('right' ,0.2, 40)}>{data.place} {data.location}</motion.p>
                 <motion.p className={styles.head3} variants={fadeIn('right' ,0.3, 40)} >{data.year}</motion.p>
             </div>
+            <div className={styles.knowmore} onClick={handleOpen}>Know More</div>
         </motion.div>
+    <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        {/* <Box> */}
+    <div  className={styles.modalcontainer} >
+    <div
+      className="carousel"
+      onMouseEnter={() => {
+        setAutoPlay(false);
+        clearTimeout(timeOut);
+      }}
+      onMouseLeave={() => {
+        setAutoPlay(true);
+      }}
+    >
+      <div className={styles.carouselwrapper}>
+        {images.map((image, index) => {
+          return (
+            /* (condition) ? true : false */
+
+            <div
+              key={index}
+              className={
+                index == current
+                  ? (`${styles.carouselcard} ${styles.carouselcardactive}`)
+                  : `${styles.carouselcard}`
+              }
+            >
+              <img className={styles.cardimage} src={image.image} alt="" />
+            </div>
+          );
+        })}
+        <div className={styles.carouselarrowleft} onClick={slideLeft}>
+          &lsaquo;
+        </div>
+        <div className={styles.carouselarrowright} onClick={slideRight}>
+          &rsaquo;
+        </div>
+        <div className={styles.carouselpagination}>
+          {images.map((_, index) => {
+            return (
+              <div
+                key={index}
+                className={
+                  index == current
+                    ? `${styles.paginationdot}`+` `+`${styles.paginationdotactive}`
+                    : `${styles.paginationdot}`
+                }
+                onClick={() => setCurrent(index)}
+              ></div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+    <div className={styles.modalinfo}>
+
+    <div className={styles.modalprojecthead}>Project Head</div>
+    <div className={styles.modalprojectplace}>Project place</div>
+    <div className={styles.modalprojectinfo}> Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ex numquam voluptate veniam totam saepe. Iure, eaque. Sint, atque veniam et consequatur veritatis recusandae deleniti, officiis laudantium nulla tempora minima alias eveniet doloribus at totam. Ratione molestiae voluptatem ut error exercitationem repellendus veniam. Culpa ipsa aperiam asperiores maiores, sequi laudantium.
+
+    </div>
+    </div>
+    <div className={styles.button} onClick={handleClose}>
+          CLOSE
+    </div>
+    </div>
+      </Modal>
+        </>
     )
 }
 

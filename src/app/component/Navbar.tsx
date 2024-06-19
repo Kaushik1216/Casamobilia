@@ -93,7 +93,7 @@ export default function Navbar() {
                 <a>portfolio</a>
               </motion.li>
             </Link>
-            <Link href="/" style={{ textDecoration: "none" }}>
+            <Link href="/project" style={{ textDecoration: "none" }}>
               <motion.li
                 className={`${open ? "fade" : ""}`}
                 onClick={handleclick}

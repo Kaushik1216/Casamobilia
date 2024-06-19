@@ -30,20 +30,25 @@ const  Carousel: React.FC<props> = ({key, images})=> {
       },6000);
   });
 
-  const slideRight = () => {
+  const slideRight = async () => {
+    setAutoPlay(()=>false);
     setCurrent(current === images.length - 1 ? 0 : current + 1);
     setcolor(images[current === images.length - 1 ? 0 : current + 1].bgcolor)
     settext1(images[current === images.length - 1 ? 0 : current + 1].projectname)
     settext2(images[current === images.length - 1 ? 0 : current + 1].projectplace)
-    setTimeout(() => {}, 3000);
+    // setTimeout(() => {console.log("right timer called")}, 3000);
+    // await sleep(3);
+    setAutoPlay(true);
 };
 
-const slideLeft = () => {
+const slideLeft = async () => {
+    setAutoPlay(()=>false);
     setCurrent(current === 0 ? images.length - 1 : current - 1);
     setcolor(images[current === 0 ? images.length - 1 : current - 1].bgcolor)
     settext1(images[current === 0 ? images.length - 1 : current - 1].projectname)
     settext2(images[current === 0 ? images.length - 1 : current - 1].projectplace)
-    setTimeout(() => {}, 10000);
+    // setTimeout(() => {console.log("left timer called")}, 3000);
+    setAutoPlay(()=>true);
 };
   return (
     <div className="carouselcontainer">
@@ -162,12 +167,12 @@ const slideLeft = () => {
         </div>
     </Grid>
     </Grid>
-    <div className="carousel_arrow_left" onClick={slideLeft}>
+    {/* <div className="carousel_arrow_left" onClick={slideLeft}>
             &lsaquo;
             </div>
             <div className="carousel_arrow_right" onClick={slideRight}>
             &rsaquo;
-            </div>
+            </div> */}
             {/* <div className="carousel_pagination">
             {images.map((_, index) => {
                 return (

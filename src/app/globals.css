@@ -19,6 +19,7 @@
 body {
     overflow-x: hidden;
     color: var(--text-color);
+    background-color: var(--backgroud-primary);
 }
 
 input {
@@ -632,14 +633,14 @@ hr {
     height: 100%;
     overflow: hidden;
     opacity: 0;
-    transform: translateX(-100%);
+    /* transform: translateX(-100%); */
     transition: all 1s ease-in-out;
     box-sizing: border-box;
-    animation-fill-mode: forwards;
+    /* animation-fill-mode: forwards; */
   }
   .carousel_card-active {
     opacity: 1;
-    transform: translateX(0%);
+    /* transform: translateX(0%); */
     /* pointer-events: visible; */
   }
 
@@ -680,8 +681,17 @@ hr {
     border-radius: 50%;
     padding-bottom: 7px;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
   }
-  
+
+.carousel_arrow_left:hover{
+    scale: 1.05;
+}
+
+.carousel_arrow_right:hover{
+    scale: 1.05;
+}
+  .carousel_arrow_right
   .carousel_arrow_left {
     left: 15px;
   }
