@@ -1,0 +1,217 @@
+.collectioncontainer{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.collectionintro{
+    text-align: center;
+    width:60%
+}
+
+.centerdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.collectionhead {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.collectionpara{
+    margin-top: 40px;
+    margin-bottom: 50px;
+    font-size: 1rem;
+}
+
+.imagecontainercoll{
+    position: relative;
+    height: 90vh;
+    /* width: 80%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.collection{
+    /* background-color:black; */
+}
+
+.categorycontainer {
+    padding-top: 8rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+.warrapcontainer{
+    padding-left: 5rem;
+    padding-right: 5rem;
+    background-color: var(--backgroud-primary);
+}
+.warrapcontainer2 {
+    background-color: var(--backgroud-primary);
+}
+.collectionvideo {
+    padding-top: 5rem;
+    height: 85vh;
+    width: 100vw;
+    background-color: var(--backgroud-primary);
+}
+.videocontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.collectionvid {
+    max-width: 100%; 
+    max-height: 100%;
+}
+
+.collectiontext1 {
+   text-align: left;
+   font-size: 1rem;
+   padding-bottom: 4rem;
+   background-color: var(--backgroud-primary);
+   padding-left: 8rem; 
+}
+.collectiontext2 {
+    text-align: left;
+    padding-right: 8rem;
+    padding-bottom: 4rem;
+    font-size: 1rem;
+    background-color: var(--backgroud-primary);
+}
+
+.imagecontainer3 {
+    margin-top: 5rem;
+    /* margin-bottom: 10rem; */
+    position: relative;
+    color:aliceblue;
+}
+
+.collectionbg {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1!important;
+}
+.imagecontainer1{
+    padding: 5rem;
+    padding-top: 10rem;
+    background-color: var(--backgroud-primary);
+}
+.imagecontainer2{
+    padding: 5rem;
+    padding-top: 10rem;
+}
+
+.collectionimage{
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  /* height: unset !important; */
+}
+
+.collectiontext5{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.collectioncontainer4{
+    height: 400px;
+    width: 100%;
+}
+.collectioncontainerbt{
+    margin-top: 50px;
+}
+.collectiontext5 {
+    font-size: 1rem;
+    padding: 30px;
+    text-align: justify;
+}
+@media screen and (max-width:1000px) {
+    .collectiontext1 {
+        padding-left: 5rem;
+    }
+    .collectiontext2 {
+        padding-right: 5rem;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .collectionvideo{
+        height: 40vh;
+    }
+    .collectiontext1 {
+        padding-top:40px;
+        padding-bottom: 40px;
+        font-size: 1rem;
+    }
+    .collectiontext2{
+        font-size: 1rem;
+    }
+    .imagecontainer {
+        width: 100%;
+        height: 50vh;
+    }
+    .imagecontainer1{
+        padding: 0.5rem;
+        padding-top: 1rem;
+    }
+    .imagecontainer2{
+        padding: 0.5rem;
+        padding-top: 1rem;
+    }
+    .collectiontext1 {
+        padding-left: 2rem;
+    }
+    .collectiontext2 {
+        padding-right: 2rem;
+    }
+    .collectiontext5 {
+        padding: 10px;
+    }
+    .categorycontainer{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .collectionintro{
+        width:70%;
+    }
+    .imagecontainercoll{
+        height: 70vh;
+    }
+}
+@media screen and (max-width:600px) {
+    .imagecontainer3 {
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: -10px;
+    }
+    .collectiontext3 {
+        top:40%;
+        left: 20%;
+        right: 20%;
+        z-index: 1;
+    }
+    .collectiontext2{
+        text-align: justify;
+    }
+    .collectiontext5 {
+        padding: 5px;
+    }
+    .collectionintro{
+        width: 80%;
+    }
+    .categorycontainer{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .collectionintro{
+        width:80%;
+    }
+    .imagecontainercoll{
+        height: 50vh;
+    }
+}

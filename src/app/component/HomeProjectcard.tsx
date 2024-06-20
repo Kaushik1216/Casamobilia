@@ -54,7 +54,7 @@ const  HomeProjectcard: React.FC<props> = ({data})=>{
         transition: { delay: 0.2 }
     }}
     style={spacingcontainer}
-                        onClick={() => router.push('/project/'+((data.alt).toLowerCase()))}>
+                        onClick={() => router.push('/collections/'+((data.alt).toLowerCase()))}>
                         <motion.div className={styles.bannerimagebig}
                             // style={{
                             //     backgroundImage: `url(${data.src})`,
@@ -63,7 +63,7 @@ const  HomeProjectcard: React.FC<props> = ({data})=>{
                             variants={fadeIn("up", 0.2, 30)}
                             initial="hidden"
                             whileInView={"show"}
-                            viewport={{ once: true, amount: 0.8 }}
+                            viewport={{ once: true, amount: 0.4 }}
                             whileHover={"hover"}
                             whileTap={"hover"}
                             >
@@ -72,7 +72,7 @@ const  HomeProjectcard: React.FC<props> = ({data})=>{
                                 variants={fadeIn("up", 0.2, 20)}
                                 initial="hidden"
                                 whileInView={"show"}
-                                viewport={{ once: true, amount: 0.8 }}>
+                                viewport={{ once: true, amount: 0.6 }}>
                                 {data.alt}
                             </motion.p>
                         </motion.div>
@@ -81,6 +81,7 @@ const  HomeProjectcard: React.FC<props> = ({data})=>{
                                 Click to Explore More
                             </p>
                         </motion.div> */}
+                                    <div className={styles.knowmore} onClick={() => router.push('/collections/'+((data.alt).toLowerCase()))}>Know More</div>
                     </motion.div>
 ) : (
     <motion.div className={styles.projectcontainer}
@@ -89,7 +90,7 @@ const  HomeProjectcard: React.FC<props> = ({data})=>{
         transition: { delay: 0.2 }
     }}
     style={spacingcontainer}
-                        onClick={() => router.push('/project/'+((data.alt).toLowerCase()))}>
+                        onClick={() => router.push('/collections/'+((data.alt).toLowerCase()))}>
                         <motion.div className={styles.bannerimagesmall}
                             // style={{
                             //     backgroundImage: `url(${data.src})`,
@@ -98,7 +99,7 @@ const  HomeProjectcard: React.FC<props> = ({data})=>{
                             variants={fadeIn("up", 0.2, 30)}
                             initial="hidden"
                             whileInView={"show"}
-                            viewport={{ once: true, amount: 0.8 }}
+                            viewport={{ once: true, amount: 0.4 }}
                             whileHover={"hover"}
                             >
                             <Image src={data.src} alt='' layout='fill'/>
@@ -106,7 +107,7 @@ const  HomeProjectcard: React.FC<props> = ({data})=>{
                                 variants={fadeIn("up", 0.2, 20)}
                                 initial="hidden"
                                 whileInView={"show"}
-                                viewport={{ once: true, amount: 0.8 }}>
+                                viewport={{ once: true, amount: 0.6 }}>
                                 {data.alt}
                             </motion.p>
                         </motion.div>
@@ -115,6 +116,7 @@ const  HomeProjectcard: React.FC<props> = ({data})=>{
                                 Click to Explore More
                             </p>
                         </motion.div> */}
+  <div className={styles.knowmore} onClick={() => router.push('/collections/'+((data.alt).toLowerCase()))}>Know More</div>
                     </motion.div>
   )
 }

@@ -19,7 +19,6 @@ export default function About() {
 
   useEffect(()=>{
     setWindowWidth(window.innerWidth);
-    console.log("inner width :->>>>>>  " , window.innerWidth);
   })
   return (
     <>

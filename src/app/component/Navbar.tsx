@@ -81,7 +81,7 @@ export default function Navbar() {
                 <a>About</a>
               </motion.li>
             </Link>
-            <Link href="" style={{ textDecoration: "none" }}>
+            <Link href="/collections" style={{ textDecoration: "none" }}>
               <motion.li
                 className={`${open ? "fade" : ""}`}
                 onClick={handleclick}
@@ -90,7 +90,7 @@ export default function Navbar() {
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.7 }}
               >
-                <a>portfolio</a>
+                <a>Collections</a>
               </motion.li>
             </Link>
             <Link href="/project" style={{ textDecoration: "none" }}>

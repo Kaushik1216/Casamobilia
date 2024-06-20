@@ -1,0 +1,132 @@
+.container{
+    margin-top: 50px;
+    /* padding-left: 5rem; */
+    /* padding-right: 5rem; */
+}
+
+.containerright{
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+.containerleft{
+    position: relative;
+}
+.containerleft2{
+    position: relative;
+    padding-left: 20px;
+}
+
+.conleft {
+    position: absolute;
+}
+.svgcontainer {
+    position: absolute;
+    left:0%;
+    /* top:50%; */
+    opacity: 0.8;
+
+}
+.elements{
+    position: absolute;
+    left:10%;
+    /* top: 50%!important */
+    padding-top: 8%;
+}
+.element{
+    display: flex;
+    /* flex-direction: column; */
+    margin-left: -30px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.svgcontainer2 {
+    position: absolute;
+    left:5%;
+    /* top:50%; */
+    opacity: 0.8;
+
+}
+.elements2{
+    position: absolute;
+    left:15%;
+    /* top: 50%!important */
+    padding-top: 8%;
+    cursor: pointer;
+}
+.element2{
+    display: flex;
+    /* flex-direction: column; */
+    margin-left: -30px;
+    margin-top: 10px;
+}
+
+.hr{
+    height: 0.5px;
+    width: 50px;
+    z-index: -1;
+    background-color: rgba(90, 86, 86, 0.203);
+}
+.elementpara{
+    margin-left: -10px;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+.collectionhead {
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: left;
+    padding-top: 20px;
+    margin-left:8%;
+    
+}
+.centerdiv{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.collectionpara{
+    margin-left:8%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 70%;
+}
+.collectionpara2{
+    margin-left:8%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 70%;
+    margin-right: 20%;
+}
+
+@media screen and (max-width:600px) {
+    .containerright{
+        display: none;
+    }
+    .containerleft{
+        height: 400px;
+    }
+    .containerleft2{
+        height: 400px;
+    }
+    .collectionhead{
+        text-align: center;
+    }
+    .centerdiv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .collectionpara{
+        width:90%;
+        text-align: center;
+    }
+    .elements , .elements2{
+        left:29%;
+    }
+    .svgcontainer , .svgcontainer2{
+        left:15%;
+        height: 300px;
+    }
+}

@@ -117,7 +117,6 @@ const slideLeft = async () => {
   <Grid item xs={12} sm={12} md={6} ls={6}>
 
         <div className="carouselright" style={{backgroundColor:`${color}`}}>
-
         <div
         className="carousel carousel2"
         >

@@ -21,7 +21,7 @@ interface Idata {
 var alldata: Idata[] = [
     {
         src: '/furniture.png',
-        alt: 'FURNITURES',
+        alt: 'SOFAS',
         dir: "right",
         classname: "bannerimagebig",
         bgcolor: '#D7D7D7',

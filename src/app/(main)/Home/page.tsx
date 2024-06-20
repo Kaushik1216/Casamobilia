@@ -6,6 +6,7 @@ import Homeproject from '@/app/component/Homeproject'
 import Carousel from '@/app/component/Carousel'
 import Plx from "react-plx";
 import Feedback from '@/app/component/feedback/Feedback'
+import Homecollection from '@/app/component/Homecollection/Homecollection'
 interface Iimage {
   alt: string,
   srcleft: string,
@@ -55,7 +56,7 @@ export default function Home() {
       {/* <Imagecarousel/> */}
       <Carousel key={1} images={images}/>
         <HomeSection2/>
-        <Homeproject/>
+        <Homecollection/>
         <Feedback/>
     </>
   )
