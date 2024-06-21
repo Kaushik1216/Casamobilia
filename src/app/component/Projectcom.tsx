@@ -10,11 +10,13 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useState , useEffect } from 'react';
 interface Idata {
-    name: string,
-    place: string,
-    location: string,
-    year: Number,
-    bgimg: string
+   projectname:String,
+  projectyear: String,
+  projectplace: String,
+  projectdesciption: String,
+  backgroundimage:String,
+  images: String[],
+  projecttype:String
 }
 interface props {
     key: Number,
@@ -24,31 +26,13 @@ interface props {
 
 const Projectcom: React.FC<props> = ({ key, data }) => {
       const [open, setOpen] = React.useState(false);
+      const [images, setImages] = React.useState(data.images);
       const handleOpen = () => setOpen(true);
       const handleClose = () => setOpen(false);
-      const images = [
-        {
-          image: "/krishnakunj1.jpg",
-          title: "Brazil",
-        },
-        {
-          image: "/krishnakunj2.jpg",
-          title: "China",
-        },
-        {
-          image: "/vivekji1.jpg",
-          title: "France",
-        },
-        {
-          image: "/vivekji2.jpg",
-          title: "Japan",
-        }
-      ];
-      
       const [current, setCurrent] = useState(0);
       const [autoPlay, setAutoPlay] = useState(true);
       let timeOut = null;
-    
+      console.log("project desc " , data.projectdesciption);
       useEffect(() => {
         timeOut =
           autoPlay &&
@@ -71,11 +55,11 @@ const Projectcom: React.FC<props> = ({ key, data }) => {
           animate="hidden"
           whileHover="show"
           >
-            <Image src={data.bgimg} alt='' layout='fill'/>
+            <Image src={data.backgroundimage} alt='' layout='fill'/>
             <div className={styles.overlay}>
-                <motion.p className={styles.head1} variants={fadeIn('right' ,0.1, 40)}>{data.name}</motion.p>
-                <motion.p className={styles.head2} variants={fadeIn('right' ,0.2, 40)}>{data.place} {data.location}</motion.p>
-                <motion.p className={styles.head3} variants={fadeIn('right' ,0.3, 40)} >{data.year}</motion.p>
+                <motion.p className={styles.head1} variants={fadeIn('right' ,0.1, 40)}>{data.projectname}</motion.p>
+                <motion.p className={styles.head2} variants={fadeIn('right' ,0.2, 40)}>{data.projectplace}</motion.p>
+                <motion.p className={styles.head3} variants={fadeIn('right' ,0.3, 40)} >{data.projectyear}</motion.p>
             </div>
             <div className={styles.knowmore} onClick={handleOpen}>Know More</div>
         </motion.div>
@@ -110,7 +94,7 @@ const Projectcom: React.FC<props> = ({ key, data }) => {
                   : `${styles.carouselcard}`
               }
             >
-              <img className={styles.cardimage} src={image.image} alt="" />
+              <img className={styles.cardimage} src={image} alt="" />
             </div>
           );
         })}
@@ -121,7 +105,7 @@ const Projectcom: React.FC<props> = ({ key, data }) => {
           &rsaquo;
         </div>
         <div className={styles.carouselpagination}>
-          {images.map((_, index) => {
+          {(data.images).map((_, index) => {
             return (
               <div
                 key={index}
@@ -139,8 +123,8 @@ const Projectcom: React.FC<props> = ({ key, data }) => {
     </div>
     <div className={styles.modalinfo}>
 
-    <div className={styles.modalprojecthead}>Project Head</div>
-    <div className={styles.modalprojectplace}>Project place</div>
+    <div className={styles.modalprojecthead}>{data.projectname}</div>
+    <div className={styles.modalprojectplace}>{data.projectplace}</div>
     <div className={styles.modalprojectinfo}> Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ex numquam voluptate veniam totam saepe. Iure, eaque. Sint, atque veniam et consequatur veritatis recusandae deleniti, officiis laudantium nulla tempora minima alias eveniet doloribus at totam. Ratione molestiae voluptatem ut error exercitationem repellendus veniam. Culpa ipsa aperiam asperiores maiores, sequi laudantium.
 
     </div>

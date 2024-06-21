@@ -24,11 +24,7 @@ const mongoose = require("mongoose");
 //     }
 // };
 
-export const connectDB = async () => {
-    if(mongoose.connection[0].readyState){
-        return true;
-    }
-        
+export const connectDB = async () => {        
     try {
         const Database = "mongodb://localhost:27017/casamobilia"
         //  const Database = process.env.DATABASE_URI.replace(

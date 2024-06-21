@@ -15,11 +15,13 @@ interface props {
     };
 }
 interface apidata {
-  name:string,
-  place:string,
-  location:string,
-  year:Number,
-  bgimg:string
+ projectname:String,
+ projectyear: String,
+ projectplace: String,
+ projectdesciption: String,
+ backgroundimage:String,
+ images: String[],
+ projecttype:String
 }
 const Projects: React.FC<props> = async ({params}) => {
   // const router = useRouter(); // Not needed with props
