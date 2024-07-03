@@ -10,6 +10,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { YouTube } from '@mui/icons-material';
 import XIcon from '@mui/icons-material/X';
 import path from 'path';
+import Link from 'next/link'
 export default function Footer() {
     const currentYear = new Date().getFullYear();
     const logostyle = {
@@ -40,6 +41,8 @@ export default function Footer() {
     }
 
     return (
+        <>
+        
         <div className={styles.footercontainer}>
             <div className={styles.socialdiv}>
                 <motion.hr className={styles.socialhr} variants={pathVariants}
@@ -55,12 +58,12 @@ export default function Footer() {
                                 initial="hidden"
                                 whileInView="visible"
                                 whileHover={{ scale: 1.05}}
-                            >
+                                >
                                 <motion.path fill-rule="evenodd" clip-rule="evenodd" stroke="#000000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"  d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752
                           c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407
                           c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752
                           c17.455,0,31.656,14.201,31.656,31.655V122.407z"
-                                    variants={pathVariants} />
+                          variants={pathVariants} />
                                 <motion.path  fill-rule="evenodd" clip-rule="evenodd" stroke="#000000" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"d="M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561
                           C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561
                           c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z"variants={pathVariants} />
@@ -107,17 +110,29 @@ export default function Footer() {
                                 whileInView="visible" />
             </div>
             <div>
+                <div>
                 <Image
                     priority={true}
                     src="/logo.png"
-                    width={115}
-                    height={70}
+                    width={110}
+                    height={50}
                     alt="Casamobilia logo"
-                    // style={logostyle}
                     quality={100}
-                />
+                    />
+                </div>
+            </div>
+            <div className={styles.footerlink}>
+                <Grid container spacing={2} justifyContent="center">
+                    <Grid item><Link href="/">Home</Link></Grid>
+                    <Grid item><Link href="/about">About</Link></Grid>
+                    <Grid item><Link href="/collections">Collections</Link></Grid>
+                    <Grid item><Link href="/project">Projects</Link></Grid>
+                    <Grid item><Link href="/contact">Contact Us</Link></Grid>
+                </Grid>
             </div>
             <p>Copyright © {currentYear} CasaMobilia • All Rights Reserved</p>
         </div>
+        
+      </>
     )
 }

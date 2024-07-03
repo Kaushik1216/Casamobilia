@@ -33,7 +33,6 @@ nav {
     position: fixed;
     /* Fixed positioning keeps it in place while scrolling */
     top: 0;
-    /* Position at the top of the viewport */
     left: 0;
     height: 5rem;
     width: 100vw;
@@ -42,21 +41,28 @@ nav {
     display: flex;
     z-index: 20000;
     color: var(--text-color);
+    position: relative;
 }
 
 
 
+.maincontainer{
+  padding-top: 5rem;
+}
 
 /*Styling logo*/
 .logo {
-    padding: 1vh 1vw;
     text-align: center;
-    width: 30%;
-    margin-left: 3%;
+    width: 20%;
+    height: 4rem;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     z-index: 20000;
+    left:50%;
+    padding-top: 1vh;
+    transform: translate(-20%,0);
     /* backdrop-filter: blur(20px);  */
 }
 
@@ -144,8 +150,8 @@ nav {
 
 .menu {
     position: absolute;
-    right: 3%;
-    top: 21%;
+    right: 2.5%;
+    top: 27%;
     font-size: 15px;
     font-weight: bolder;
     margin-right: -6px;
@@ -162,7 +168,6 @@ nav {
     letter-spacing: 0.1em;
     text-align: center;
     /* line-height: 3em; */
-    position: absolute;
     overflow: hidden;
     z-index: 1;
     transition: 0.5s;
@@ -373,7 +378,7 @@ hr {
     background-color: #ddd; /* Change color as needed */
     height: 2px; /* Set the height explicitly */
     margin: 10px 0;
-  }
+}
 
 
 .abouttext1 {
@@ -397,7 +402,7 @@ hr {
 }
 @media screen and (max-width: 600px) {
     .menu {
-        top: 10%;
+        top: 26%;
         right: 4%;
     }
 
@@ -409,7 +414,7 @@ hr {
         /* margin: -10px; */
     }
     .logo {
-        width: 40%;
+        width: 60%;
     }
 }
 
@@ -423,18 +428,18 @@ hr {
   .app-form-group {
     margin-bottom: 20px;
   }
-  
+
   .app-form-group.message {
     margin-top: 40px;
     color:var(--background-dark);
     font-weight: 600;
   }
-  
+
   .app-form-group.buttons {
     margin-bottom: 0;
     text-align: right;
   }
-  
+
   .app-form-control {
     width: 100%;
     padding: 10px 0;
@@ -602,7 +607,7 @@ hr {
     vertical-align: middle;
   }
   .carouselright .carousel{
-    height: 80vh;
+    height: 74vh;
     width: 80%;
     padding: 60px;
   }
@@ -731,6 +736,7 @@ hr {
     left:55%;
     text-align: left;
     font-weight: 800;
+    font-size: 80px;
     color: var(--backgroud-primary);
 }
 .imagetextcontainer2{

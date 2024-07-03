@@ -81,7 +81,7 @@ const  HomeProjectcard: React.FC<props> = ({data})=>{
                                 Click to Explore More
                             </p>
                         </motion.div> */}
-                                    <div className={styles.knowmore} onClick={() => router.push('/collections/'+((data.alt).toLowerCase()))}>Know More</div>
+                                    <div className={styles.knowmore} onClick={() => router.push('/collections/'+((data.alt).toLowerCase()))}>Explore</div>
                     </motion.div>
 ) : (
     <motion.div className={styles.projectcontainer}
@@ -116,7 +116,7 @@ const  HomeProjectcard: React.FC<props> = ({data})=>{
                                 Click to Explore More
                             </p>
                         </motion.div> */}
-  <div className={styles.knowmore} onClick={() => router.push('/collections/'+((data.alt).toLowerCase()))}>Know More</div>
+  <div className={styles.knowmore} onClick={() => router.push('/collections/'+((data.alt).toLowerCase()))}>Explore</div>
                     </motion.div>
   )
 }

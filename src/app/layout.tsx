@@ -50,7 +50,9 @@ export default function RootLayout({
       <body className={inter.className}>
         {/* <div className="container" style={{marginTop:"100px"}}> */}
             <Navbar/>
+            <div className="maincontainer">
             {children} 
+            </div>
             <Footer/>
             <TopScroll/> 
         {/* </div> */}

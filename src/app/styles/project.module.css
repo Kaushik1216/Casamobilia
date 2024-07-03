@@ -69,8 +69,9 @@
     transform: translate(-50%, -50%);
     width: 60%;
     height: 80vh;
-    background-color:var(--backgroud-primary);
-    /* border: 2px solid #000; */
+    background-color:var(--background-dark);
+    border: 2px solid #000;
+    color: var(--text-color-light);
     box-shadow: 24;
     padding: 20px;
     border-radius: 15px;
@@ -206,7 +207,7 @@
 .button {
   --border: 2px;    /* the border width */
   --slant: 0.7em;   /* control the slanted corners */
-  --color: #fc4137; /* the color */
+  --color: var( --secondary-color); /* the color */
   
   font-size: 1.2rem;
   padding: 0.4em 1.2em;

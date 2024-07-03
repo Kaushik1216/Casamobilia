@@ -1,0 +1,34 @@
+[
+    {
+      "alt": "Ambus 1",
+      "srcleft": "/ambus1.jpg",
+      "srcright": "/ambus2.jpg",
+      "projectname": "Ambus",
+      "projectplace": "Delhi",
+      "bgcolor":"#746867"
+    },
+    {
+      "alt": "Krishna Kunj",
+      "srcleft": "/krishnakunj1.jpg",
+      "srcright": "/krishnakunj2.jpg",
+      "projectname": "Krishna Kunj",
+      "projectplace": "Delhi Sec 11",
+      "bgcolor":"#9C956D"
+    },
+    {
+      "alt": "PP Steel",
+      "srcleft": "/ppsteel1.jpg",
+      "srcright": "/ppSteel2.jpg",
+      "projectname": "PP Steel",
+      "projectplace": "Delhi - sec 42",
+      "bgcolor":"#6F7271"
+    },
+    {
+      "alt": "Vivek JI",
+      "srcleft": "/vivekji1.jpg",
+      "srcright": "/vivekji2.jpg",
+      "projectname": "Vivek JI",
+      "projectplace": "Delhi",
+      "bgcolor":"#192729"
+    }
+  ]

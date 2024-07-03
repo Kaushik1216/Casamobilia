@@ -55,7 +55,7 @@ const slideLeft = async () => {
 
     <Grid container>
 
-  <Grid item xs={12} sm={12} md={6} ls={6}>
+  <Grid item xs={12} sm={12} md={6} lg={6}>
 
         <div className="carouselleft" style={{backgroundColor:`${color}`}}>
 
@@ -114,7 +114,7 @@ const slideLeft = async () => {
         </div>
         </div>
     </Grid>
-  <Grid item xs={12} sm={12} md={6} ls={6}>
+  <Grid item xs={12} sm={12} md={6} lg={6}>
 
         <div className="carouselright" style={{backgroundColor:`${color}`}}>
         <div
@@ -166,32 +166,11 @@ const slideLeft = async () => {
         </div>
     </Grid>
     </Grid>
-    {/* <div className="carousel_arrow_left" onClick={slideLeft}>
-            &lsaquo;
-            </div>
-            <div className="carousel_arrow_right" onClick={slideRight}>
-            &rsaquo;
-            </div> */}
-            {/* <div className="carousel_pagination">
-            {images.map((_, index) => {
-                return (
-                    <div
-                    key={index}
-                    className={
-                        index == current
-                        ? "pagination_dot pagination_dot-active"
-                        : "pagination_dot"
-                        }
-                        onClick={() => setCurrent(index)}
-                        ></div>
-                    );
-                })}
-            </div> */}
     <div className="imagetextcontainer1">
-        <p className="imagetext1">{text1} , {text2}</p>
+        <p className="imagetext1">{text1}</p>
     </div>
     <div className="imagetextcontainer2">
-        <p className="imagetext1">{text1} , {text2}</p>
+        <p className="imagetext1">{text1}</p>
     </div>
     </div>
   );

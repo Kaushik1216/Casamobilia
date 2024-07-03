@@ -1,4 +1,5 @@
 "use client"
+// @ts-ignore
 import React, { useEffect } from 'react'
 import Head from 'next/head'
 import { Metadata } from 'next'
@@ -8,9 +9,7 @@ import { motion } from 'framer-motion'
 import { fadeIn } from '../variants'
 import { useState } from 'react'
 import Plx from "react-plx";
-// export const metadata: Metadata = {
-//     title: "about"
-// }
+
 import Video from 'next-video';
 import BackgroundVideo from 'next-video/background-video'
 import Image from 'next/image'
@@ -19,13 +18,13 @@ export default function About() {
 
   useEffect(()=>{
     setWindowWidth(window.innerWidth);
-  })
+  },[])
   return (
     <>
       {/* <BackgroundVideo src='/logoreveal.mp4' className={styles.aboutvideo}/> */}
 
       <Grid container className={styles.videocontainer}>
-        <Grid items xs={12}>
+        <Grid item xs={12}>
           <Plx
             parallaxData={[
               {

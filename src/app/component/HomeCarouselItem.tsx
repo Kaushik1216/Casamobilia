@@ -1,6 +1,6 @@
 import React from 'react'
 import { Paper, Button } from '@mui/material'
-
+import Image from 'next/image'
 import { useState , useEffect } from 'react'
 import styles from '../styles/HomeCorousel.module.css'
 import { motion ,useInView, inView} from "framer-motion"

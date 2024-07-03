@@ -11,7 +11,8 @@ import { fadeIn } from "../(main)/variants";
 import '../globals.css'
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const ref = React.useRef<HTMLInputElement>(null);
+  const [logo, setlogo] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
   const handleclick = () => {
     setOpen(!open);
   };
@@ -21,19 +22,28 @@ export default function Navbar() {
   };
 
   useEffect (()=>{
-    let handler = (e)=>{
-      if(!(ref!=null && ref.current.contains(e.target))){
+    let handler = (e:MouseEvent)=>{
+      if (ref.current && !ref.current.contains(e.target as Node)) {
         setOpen(false);
       }
     }
     document.addEventListener("mousedown" , handler);
   })
+  const hidelogo =()=>{
+    if(window.scrollY>=40) {
+      setlogo(true);
+    }else {
+      setlogo(false);
+    }
+  }
+
+  window.addEventListener('scroll', hidelogo);
   return (
     <>
       <div className='navdiv' ref={ref}>
         <nav>
         {/* <nav style={{backgroundColor:`${color?`#E9E7E4`:``}`}} className={color?'navbg':''}> */}
-          <div className="logo" >
+          <div className="logo" style={{display:`${logo ? "none":""}`}}>
             <Image
               priority={true}
               src="/logo.png"

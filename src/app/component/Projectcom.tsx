@@ -10,19 +10,18 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { useState , useEffect } from 'react';
 interface Idata {
-   projectname:String,
-  projectyear: String,
-  projectplace: String,
-  projectdesciption: String,
-  backgroundimage:String,
-  images: String[],
-  projecttype:String
+  projectname:string,
+  projectyear: string,
+  projectplace: string,
+  projectdesciption: string,
+  backgroundimage:string,
+  images: string[],
+  projecttype:string
 }
 interface props {
     key: Number,
     data: Idata
 }
-
 
 const Projectcom: React.FC<props> = ({ key, data }) => {
       const [open, setOpen] = React.useState(false);
@@ -31,8 +30,7 @@ const Projectcom: React.FC<props> = ({ key, data }) => {
       const handleClose = () => setOpen(false);
       const [current, setCurrent] = useState(0);
       const [autoPlay, setAutoPlay] = useState(true);
-      let timeOut = null;
-      console.log("project desc " , data.projectdesciption);
+      let timeOut: NodeJS.Timeout | Boolean | Number;
       useEffect(() => {
         timeOut =
           autoPlay &&
@@ -75,7 +73,6 @@ const Projectcom: React.FC<props> = ({ key, data }) => {
       className="carousel"
       onMouseEnter={() => {
         setAutoPlay(false);
-        clearTimeout(timeOut);
       }}
       onMouseLeave={() => {
         setAutoPlay(true);

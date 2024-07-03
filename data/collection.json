@@ -1,0 +1,24 @@
+[
+    {
+
+        "collectionname": "sofa",
+        "firstdesciption": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ab rerum eum magni. Tempore, deleniti qui minima non dolorem cum voluptas enim, harum eos ad maiores necessitatibus inventore amet facilis quidem nesciunt nisi. Assumenda, dolorum nam, perspiciatis alias quisquam eum sunt cupiditate id nihil officiis odit vero corrupti, enim possimus! ",
+        "seconddesciption": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ab rerum eum magni. Tempore, deleniti qui minima non dolorem cum voluptas enim, harum eos ad maiores necessitatibus inventore amet facilis quidem nesciunt nisi. Assumenda, dolorum nam, perspiciatis alias quisquam eum sunt cupiditate id nihil officiis odit vero corrupti, enim possimus! ",
+        "thirddesciption": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ab rerum eum magni. Tempore, deleniti qui minima non dolorem cum voluptas enim, harum eos ad maiores necessitatibus inventore amet facilis quidem nesciunt nisi. Assumenda, dolorum nam, perspiciatis alias quisquam eum sunt cupiditate id nihil officiis odit vero corrupti, enim possimus! ",
+        "fourthdesciption": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ab rerum eum magni. Tempore, deleniti qui minima non dolorem cum voluptas enim, harum eos ad maiores necessitatibus inventore amet facilis quidem nesciunt nisi. Assumenda, dolorum nam, perspiciatis alias quisquam eum sunt cupiditate id nihil officiis odit vero corrupti, enim possimus! ",
+        "fifthdesciption": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ab rerum eum magni. Tempore, deleniti qui minima non dolorem cum voluptas enim, harum eos ad maiores necessitatibus inventore amet facilis quidem nesciunt nisi. Assumenda, dolorum nam, perspiciatis alias quisquam eum sunt cupiditate id nihil officiis odit vero corrupti, enim possimus! ",
+        "firstimage":"/sofa1.jpg",
+        "secondimage":"/sofa2.jpg",
+        "thirdimage": "/sofa4.jpg",
+        "fourthimage": "/sofa5.jpg",
+        "fifthimage": "/sofa3.jpg",
+        "secondmodalimages": ["/sofa4.jpg","/sofa5.jpg","/sofa3.jpg"],
+        "secondmodaldescription": ["/sofa4.jpg","/sofa5.jpg","/sofa3.jpg"],
+        "thirdmodaldescription": ["/sofa4.jpg","/sofa5.jpg","/sofa3.jpg"],
+        "fourthmodaldescription": ["/sofa4.jpg","/sofa5.jpg","/sofa3.jpg"],
+        "fifthmodaldescription": ["/sofa4.jpg","/sofa5.jpg","/sofa3.jpg"],
+        "thirdmodalimages": ["/sofa5.jpg","/sofa4.jpg","/sofa5.jpg","/sofa3.jpg"],
+        "fourthmodalimages": ["/sofa3.jpg","/sofa4.jpg","/sofa5.jpg","/sofa3.jpg"],
+        "fifthmodalimages": ["/sofa4.jpg","/sofa5.jpg","/sofa3.jpg"]
+    }
+]
