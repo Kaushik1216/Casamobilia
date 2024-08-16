@@ -35,7 +35,7 @@ export default function Project() {
       </Plx>
         <Grid container>
           <Grid item xs={12} md={6} sm={6} padding={1}
-          onClick={() => router.push('/project/interiors')}>
+          onClick={() => router.push('/project/interior')}>
             <motion.div className={styles.projecttypecontainer}
              variants={fadeIn("right", 0.2, 40)}
              initial="hidden"
@@ -44,10 +44,11 @@ export default function Project() {
             <Image src='/ambus1.jpg' alt='' layout='fill'/>
             <div className={styles.overlay}></div>
             <div className={styles.projecttypename}>Interiors</div>
-            <div className={styles.knowmore} onClick={() => router.push('/project/interiors')}>Explore</div>
+            <div className={styles.knowmore} onClick={() => router.push('/project/interior')}>Explore</div>
             </motion.div>
           </Grid>
-          <Grid item xs={12} md={6} sm={6} padding={1}>
+          <Grid item xs={12} md={6} sm={6} padding={1}
+          onClick={() => router.push('/project/interior')}>
           <motion.div className={styles.projecttypecontainer}
           variants={fadeIn("left", 0.2, 40)}
           initial="hidden"
@@ -56,13 +57,14 @@ export default function Project() {
             <Image src='/ambus2.jpg' alt='' layout='fill'/>
             <div className={styles.overlay}></div>
             <div className={styles.projecttypename}>Interiors</div>
-            <div className={styles.knowmore} onClick={() => router.push('/project/interiors')}>Explore</div>
+            <div className={styles.knowmore} onClick={() => router.push('/project/interior')}>Explore</div>
 
             </motion.div>
           </Grid>
         </Grid>
         <Grid container>
-          <Grid item xs={12} md={6} sm={6} padding={1}>
+          <Grid item xs={12} md={6} sm={6} padding={1}
+          onClick={() => router.push('/project/interior')}>
             <motion.div className={styles.projecttypecontainer}
             variants={fadeIn("right", 0.2, 40)}
             initial="hidden"
@@ -71,11 +73,12 @@ export default function Project() {
             <Image src='/krishnakunj1.jpg' alt='' layout='fill'/>
             <div className={styles.overlay}></div>
             <div className={styles.projecttypename}>Interiors</div>
-            <div className={styles.knowmore} onClick={() => router.push('/project/interiors')}>Explore</div>
+            <div className={styles.knowmore} onClick={() => router.push('/project/interior')}>Explore</div>
 
             </motion.div>
           </Grid>
-          <Grid item xs={12} md={6} sm={6} padding={1}>
+          <Grid item xs={12} md={6} sm={6} padding={1}
+          onClick={() => router.push('/project/interior')}>
           <motion.div className={styles.projecttypecontainer}
           variants={fadeIn("left", 0.2, 40)}
           initial="hidden"
@@ -84,13 +87,14 @@ export default function Project() {
             <Image src='/krishnakunj2.jpg' alt='' layout='fill'/>
             <div className={styles.overlay}></div>
             <div className={styles.projecttypename}>Interiors</div>
-            <div className={styles.knowmore} onClick={() => router.push('/project/interiors')}>Explore</div>
+            <div className={styles.knowmore} onClick={() => router.push('/project/interior')}>Explore</div>
 
             </motion.div>
           </Grid>
         </Grid>
         <Grid container>
-          <Grid item xs={12} md={6} sm={6} padding={1}>
+          <Grid item xs={12} md={6} sm={6} padding={1}
+          onClick={() => router.push('/project/interior')}>
             <motion.div className={styles.projecttypecontainer}
             variants={fadeIn("right", 0.2, 40)}
             initial="hidden"
@@ -99,11 +103,12 @@ export default function Project() {
             <Image src='/ppsteel1.jpg' alt='' layout='fill'/>
             <div className={styles.overlay}></div>
             <div className={styles.projecttypename}>Interiors</div>
-            <div className={styles.knowmore} onClick={() => router.push('/project/interiors')}>Explore</div>
+            <div className={styles.knowmore} onClick={() => router.push('/project/interior')}>Explore</div>
 
             </motion.div>
           </Grid>
-          <Grid item xs={12} md={6} sm={6} padding={1}>
+          <Grid item xs={12} md={6} sm={6} padding={1}
+          onClick={() => router.push('/project/interior')}>
           <motion.div className={styles.projecttypecontainer}
           variants={fadeIn("left", 0.2, 40)}
           initial="hidden"
@@ -112,7 +117,7 @@ export default function Project() {
             <Image src='/ppsteel2.jpg' alt='' layout='fill'/>
             <div className={styles.overlay}></div>
             <div className={styles.projecttypename}>Interiors</div>
-            <div className={styles.knowmore} onClick={() => router.push('/project/interiors')}>Explore</div>
+            <div className={styles.knowmore} onClick={() => router.push('/project/interior')}>Explore</div>
 
             </motion.div>
           </Grid>
