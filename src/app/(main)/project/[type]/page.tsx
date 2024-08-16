@@ -1,5 +1,5 @@
-"use client"
 // @ts-ignore
+"use client"
 import React from 'react';
 import axios from 'axios';
 import { Grid } from '@mui/material';
@@ -27,13 +27,13 @@ interface apidata {
 const Projects: React.FC<props> = async ({params}) => {
   // const router = useRouter(); // Not needed with props
   const [result , setresult]= React.useState([{
-    "projectname": "Vivek JI",
-    "projectyear": "2022",
-    "projectplace": "Mumbai",
-    "projectdesciption": "Project Project ProjectProjectProjectProjectProjectProjectProjectProjectProjectProject ProjectProject Project",
-    "backgroundimage":"/vivekji1.jpg",
-    "images": ["/vivekji1.jpg" , "/vivekji2.jpg"],
-    "projecttype":"interior"
+    projectname: "Vivek JI",
+    projectyear: "2022",
+    projectplace: "Mumbai",
+    projectdesciption: "Project Project ProjectProjectProjectProjectProjectProjectProjectProjectProjectProject ProjectProject Project",
+    backgroundimage:"/vivekji1.jpg",
+    images: ["/vivekji1.jpg" , "/vivekji2.jpg"],
+    projecttype:"interior"
 
 }])
   // var result:apidata[] = []
@@ -55,7 +55,7 @@ const Projects: React.FC<props> = async ({params}) => {
       // const url = "http://localhost:3000/api/project/interior";
       const res = await axios.get(url);
       var temp:apidata[] = res.data.data;
-      console.log("Data , ", temp);
+      // console.log("Data , ", temp);
       if(temp.length==0){
         redirect("/");
       }
