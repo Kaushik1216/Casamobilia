@@ -1,4 +1,6 @@
+// @ts-ignore
 "use client"
+
 import React from 'react';
 import axios from 'axios';
 import { Grid } from '@mui/material';
@@ -10,11 +12,11 @@ interface ProjectProps {
     type: string; // Define type for dynamic segment
   };
 }
-interface props {
-  params: {
-    type: string; // Define type for dynamic segment
-  };
-}
+// interface props {
+//   params: {
+//     type: string; // Define type for dynamic segment
+//   };
+// }
 interface apidata {
  projectname:string,
  projectyear: string,
@@ -24,43 +26,26 @@ interface apidata {
  images: string[],
  projecttype:string
 }
-// const Projects: React.FC<props> = async ({params}) => {
-
-// }
+interface props {
+  params: {
+    type: string; // Define type for dynamic segment
+  };
+}
 const Projects: React.FC<props> = async ({params}) => {
   // const router = useRouter(); // Not needed with props
   const [result , setresult]= React.useState([])
-  // var result:apidata[] = []
-  // try{
-  //   const url = `${process.env.BASE_URL}`+'api/project/'+(`${params.type}`).slice(0 , ((params.type).length - 1));
-  //   const res = await axios.get(url);
-  //   result = res.data.data;
-  //   if(result.length==0){
-  //     redirect("/");
-  //   }
-  // }
-  // catch(error) {
-  //    redirect("/");
-  // }
-  const fetchdata = async()=>{
-    try{
-      const url = `${process.env.NEXT_PUBLIC_BASE_URL}`+'api/project/'+`${params.type}`;
-      // alert(url)
-      // const url = "http://localhost:3000/api/project/interior";
-      const res = await axios.get(url);
-      var temp:apidata[] = res.data.data;
-      // console.log("Data , ", temp);
-      if(temp.length==0){
-        redirect("/");
-      }
-      setresult(temp)
-    }
-    catch(error) {
-      redirect("/");
-    }
-  }
 
   React.useEffect(()=>{
+    const fetchdata = async()=>{
+      try{
+        const url = `${process.env.NEXT_PUBLIC_BASE_URL}`+'api/project/'+`${params.type}`;
+        const res = await axios.get(url);
+        setresult(res.data.data);
+      }
+      catch(error) {
+        redirect("/");
+      }
+    }
     fetchdata();
   },[])
 
@@ -68,7 +53,7 @@ const Projects: React.FC<props> = async ({params}) => {
     <>
     <Grid
     container>
-          {result.map((data:apidata,index:number) => (<Grid key={index} item xs={12} sm={6} md={4}>
+          {(result).map((data:apidata,index:number) => (<Grid key={index} item xs={12} sm={6} md={4}>
               <Projectcom key={index} data={data} />
               </Grid>)
               )}
