@@ -41,6 +41,7 @@ const Projects: React.FC<props> = async ({params}) => {
         const url = `${process.env.NEXT_PUBLIC_BASE_URL}`+'api/project/'+`${params.type}`;
         const res = await axios.get(url);
         setresult(res.data.data);
+        redirect("/project/interior");
       }
       catch(error) {
         redirect("/");
@@ -53,7 +54,7 @@ const Projects: React.FC<props> = async ({params}) => {
     <>
     <Grid
     container>
-          {(result).map((data:apidata,index:number) => (<Grid key={index} item xs={12} sm={6} md={4}>
+          {result && (result).map((data:apidata,index:number) => (<Grid key={index} item xs={12} sm={6} md={4}>
               <Projectcom key={index} data={data} />
               </Grid>)
               )}
