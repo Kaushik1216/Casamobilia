@@ -1,4 +1,4 @@
-'use client'
+"use client"
 // @ts-ignore
 import React from 'react';
 import axios from 'axios';
@@ -50,7 +50,7 @@ const Projects: React.FC<props> = async ({params}) => {
   // }
   const fetchdata = async()=>{
     try{
-      const url = `${process.env.BASE_URL}`+'api/project/'+`${params.type}`;
+      const url = `${process.env.NEXT_PUBLIC_BASE_URL}`+'api/project/'+`${params.type}`;
       // alert(url)
       // const url = "http://localhost:3000/api/project/interior";
       const res = await axios.get(url);

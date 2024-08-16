@@ -73,7 +73,7 @@ const Projects: React.FC<props> = async ({params}) => {
 
     const fetchdata = async()=>{
       try{
-      const url = `${process.env.BASE_URL}`+'api/collection/'+(`${params.type}`).slice(0 , ((params.type).length - 1));
+      const url = `${process.env.NEXT_PUBLIC_BASE_URL}`+'api/collection/'+(`${params.type}`).slice(0 , ((params.type).length - 1));
       const res = await axios.get(url);
       var temp:apidata[] = res.data.data;
       if(temp.length==0){
