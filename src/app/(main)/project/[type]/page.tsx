@@ -33,7 +33,64 @@ interface props {
 }
 const Projects: React.FC<props> = async ({params}) => {
   // const router = useRouter(); // Not needed with props
-  const [result , setresult]= React.useState([])
+  const [result , setresult]= React.useState([
+    {
+        "projectname": "Krishnakunj",
+        "projectyear": "2023",
+        "projectplace": "Delhi NCR",
+        "projectdesciption": "Project Project ProjectProjectProjectProjectProjectProjectProjectProjectProjectProject ProjectProject Project",
+        "backgroundimage":"/krishnakunj1.jpg",
+        "images": ["krishnakunj2.jpg" , "krishnakunj1.jpg"],
+        "projecttype":"interior"
+    },
+    {
+        "projectname": "Vivek JI",
+        "projectyear": "2022",
+        "projectplace": "Mumbai",
+        "projectdesciption": "Project Project ProjectProjectProjectProjectProjectProjectProjectProjectProjectProject ProjectProject Project",
+        "backgroundimage":"/vivekji1.jpg",
+        "images": ["/vivekji1.jpg" , "/vivekji2.jpg"],
+        "projecttype":"interior"
+
+    },
+    {
+        "projectname": "Krishnakunj",
+        "projectyear": "2023",
+        "projectplace": "Delhi NCR",
+        "projectdesciption": "Project Project ProjectProjectProjectProjectProjectProjectProjectProjectProjectProject ProjectProject Project",
+        "backgroundimage":"/krishnakunj1.jpg",
+        "images": ["krishnakunj2.jpg" , "krishnakunj1.jpg"],
+        "projecttype":"interior"
+    },
+    {
+        "projectname": "Vivek JI",
+        "projectyear": "2022",
+        "projectplace": "Mumbai",
+        "projectdesciption": "Project Project ProjectProjectProjectProjectProjectProjectProjectProjectProjectProject ProjectProject Project",
+        "backgroundimage":"/vivekji1.jpg",
+        "images": ["/vivekji1.jpg" , "/vivekji2.jpg"],
+        "projecttype":"interior"
+
+    },
+    {
+        "projectname": "Krishnakunj",
+        "projectyear": "2023",
+        "projectplace": "Delhi NCR",
+        "projectdesciption": "Project Project ProjectProjectProjectProjectProjectProjectProjectProjectProjectProject ProjectProject Project",
+        "backgroundimage":"/krishnakunj1.jpg",
+        "images": ["krishnakunj2.jpg" , "krishnakunj1.jpg"],
+        "projecttype":"kitchen"
+    },
+    {
+        "projectname": "Vivek JI",
+        "projectyear": "2022",
+        "projectplace": "Mumbai",
+        "projectdesciption": "Project Project ProjectProjectProjectProjectProjectProjectProjectProjectProjectProject ProjectProject Project",
+        "backgroundimage":"/vivekji1.jpg",
+        "images": ["/vivekji1.jpg" , "/vivekji2.jpg"],
+        "projecttype":"kitchen"
+
+    }])
 
   React.useEffect(()=>{
     const fetchdata = async()=>{
