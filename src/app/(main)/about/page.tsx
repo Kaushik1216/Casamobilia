@@ -14,12 +14,16 @@ import Video from 'next-video';
 import BackgroundVideo from 'next-video/background-video'
 import Image from 'next/image'
 export default function About() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useEffect(()=>{
-    setWindowWidth(window.innerWidth);
-  },[])
-  return (
+  const [windowWidth, setWindowWidth] = useState(0);
+  if(typeof window!== 'undefined') {
+    setWindowWidth(window.innerWidth)
+  }
+    useEffect(()=>{
+      if(typeof window!== 'undefined') {
+      setWindowWidth(window.innerWidth);
+      }
+    },[])
+    return (
     <>
       {/* <BackgroundVideo src='/logoreveal.mp4' className={styles.aboutvideo}/> */}
 
