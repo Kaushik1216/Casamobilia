@@ -37,7 +37,9 @@ export default function Navbar() {
     }
   }
 
-  window.addEventListener('scroll', hidelogo);
+  if(typeof window!== 'undefined') {
+      window.addEventListener('scroll', hidelogo);
+  }
   return (
     <>
       <div className='navdiv' ref={ref}>

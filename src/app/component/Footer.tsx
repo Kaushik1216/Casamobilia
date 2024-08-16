@@ -110,7 +110,7 @@ export default function Footer() {
                                 whileInView="visible" />
             </div>
             <div>
-                <div>
+                <div className='footerlogo'>
                 <Image
                     priority={true}
                     src="/logo.png"
