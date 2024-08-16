@@ -1,10 +1,10 @@
-// @ts-ignore
 "use client"
 import React from 'react';
 import axios from 'axios';
 import { Grid } from '@mui/material';
 import Projectcom from '@/app/component/Projectcom';
 import { redirect } from 'next/navigation'
+import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 interface ProjectProps {
   params: {
     type: string; // Define type for dynamic segment
@@ -24,18 +24,12 @@ interface apidata {
  images: string[],
  projecttype:string
 }
+// const Projects: React.FC<props> = async ({params}) => {
+
+// }
 const Projects: React.FC<props> = async ({params}) => {
   // const router = useRouter(); // Not needed with props
-  const [result , setresult]= React.useState([{
-    projectname: "Vivek JI",
-    projectyear: "2022",
-    projectplace: "Mumbai",
-    projectdesciption: "Project Project ProjectProjectProjectProjectProjectProjectProjectProjectProjectProject ProjectProject Project",
-    backgroundimage:"/vivekji1.jpg",
-    images: ["/vivekji1.jpg" , "/vivekji2.jpg"],
-    projecttype:"interior"
-
-}])
+  const [result , setresult]= React.useState([])
   // var result:apidata[] = []
   // try{
   //   const url = `${process.env.BASE_URL}`+'api/project/'+(`${params.type}`).slice(0 , ((params.type).length - 1));
@@ -50,9 +44,9 @@ const Projects: React.FC<props> = async ({params}) => {
   // }
   const fetchdata = async()=>{
     try{
-      // const url = `${process.env.NEXT_PUBLIC_BASE_URL}`+'api/project/'+`${params.type}`;
+      const url = `${process.env.NEXT_PUBLIC_BASE_URL}`+'api/project/'+`${params.type}`;
       // alert(url)
-      const url = "http://localhost:3000/api/project/interior";
+      // const url = "http://localhost:3000/api/project/interior";
       const res = await axios.get(url);
       var temp:apidata[] = res.data.data;
       // console.log("Data , ", temp);
@@ -85,8 +79,3 @@ const Projects: React.FC<props> = async ({params}) => {
 }
 
 export default Projects;
-// export async function getServerSideProps({ params }: ProjectProps) {
-//     return {
-//         props:params.type
-//     }
-// }
