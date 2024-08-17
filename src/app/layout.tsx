@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Roboto, DM_Serif_Text  } from "next/font/google";
 import "./globals.css";
 import "./globals"
-const inter = Roboto({ weight:'400', subsets: ["latin"] });
+const inter = DM_Serif_Text ({ weight:'400', subsets: ["latin"],display: 'swap', });
 import Navbar from "./component/Navbar";
 import TopScroll from "./component/TopScroll";
 import Footer from "./component/Footer";
